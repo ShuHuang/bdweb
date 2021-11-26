@@ -1,0 +1,160 @@
+html,
+body {
+  font-family: "Helvetica Neue", "Open Sans Pro", "Arial", sans-serif;
+}
+
+.navbar-light .navbar-toggler,
+.navbar-dark .navbar-toggler {
+  border-color: transparent;
+}
+
+.btn,
+.btn-lg,
+.btn-sm,
+.form-control,
+.form-control-lg,
+.form-control-sm {
+  font-size: 1rem;
+}
+
+.form-control-lg,
+.btn-lg {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.btn-link.btn-lg {
+  font-size: 1.25rem;
+}
+
+.display-1 {
+  font-size: 4.5rem;
+}
+
+.display-2 {
+  font-size: 4rem;
+}
+
+.display-3 {
+  font-size: 3.5rem;
+}
+
+.display-4 {
+  font-size: 3rem;
+}
+
+.font-weight-bold {
+  font-weight: 400;
+}
+
+.carousel-indicators li {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 0.75rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 10%;
+}
+
+code {
+  text-align: left;
+}
+
+.table th,
+.table td {
+  padding: 0;
+  border-top: none;
+}
+
+.table th {
+  padding-bottom: 0.75rem;
+}
+
+.table thead th {
+  border-bottom: 1px solid #eceeef;
+}
+
+.replacer-light-fixed-navbar {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+}
+
+.replacer-dark-fixed-navbar {
+  background-color: #000;
+}
+
+@media (max-width: 1200px) {
+  .navbar-light.fixed-top {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+  }
+
+  .navbar-dark.fixed-top {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+  }
+}
+.dropdown-toggle:after {
+  vertical-align: 0.2em;
+}
+
+.navbar-brand span {
+  display: inline-block;
+  min-height: 2rem;
+  min-width: 10rem;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+.navbar-light .navbar-brand span {
+  background-image: url("../images/MDF-logo@2x.png");
+}
+
+.navbar-dark .navbar-brand span {
+  background-image: url("../images/MDF-logo@2x.png");
+}
+
+.navbar.bg-white {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-menu .dropdown-item {
+  font-size: 0.875rem;
+  padding: 0.25rem 1rem;
+}
+
+.lead {
+  font-size: 1.125rem !important;
+}
+
+.carousel-caption {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #000;
+  background-color: #fff;
+  border: solid 1px rgba(0, 0, 0, 0.1) !important;
+}
+
+.carousel-indicators li {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.carousel-indicators .active {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-pills .nav-link.active {
+  margin-left: -1px;
+  margin-top: -1px;
+}
+
+/*# sourceMappingURL=replacer.css.map */

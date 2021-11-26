@@ -1,0 +1,71 @@
+{% extends "about/base.html" %}
+
+{% block title %}About | Battery Data{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>Battery Data Overview</h1>
+  </div>
+  <section class="section section-default">
+    <div class="container py-1">
+      <div class="row">
+        <div class="col-sm-8">
+          <p class="feature-display">This battery materials database was auto-generated using ChemDataExtractor.</p>
+
+          <p class="feature-display">It contains 292,313 data records with 17,354 unique chemical compound, extracted from 229,061 journal articles</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alternate">
+    <div class="container py-2">
+      <div class="row">
+        <div class="col-sm-8">
+          <h3>Database generation</h3>
+          <p class="feature-display">
+            ChemDataExtractor uses state-of-the-art natural language processing algorithms to interpret
+            language text that makes up the majority of scientific documents. <br>Rule-based parsers are used in ChemDataExtractor-bateries version 1.5 for database construction.
+          </p>
+
+          <p class="feature-display">
+            <b>Cite: </b>Huang, S., Cole, J.M. A database of battery materials auto-generated using ChemDataExtractor. Sci Data 7, 260 (2020).
+            <a href="http://dx.doi.org/10.1021/acs.jcim.6b00207">10.1038/s41597-020-00602-2</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alternate">
+    <div class="container py-2">
+      <div class="row">
+        <div class="col-sm-8">
+          <h3>Battery QA system</h3>
+          <p class="feature-display">
+            Explore the device component and other information of batteries.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-default">
+    <div class="container py-1">
+      <div class="row">
+        <div class="col-sm-8">
+          <h3>Data-driven material discovery</h3>
+          <p class="feature-display">
+            Prediction of next-generation battery materials using machine learning and statistical algorithms. (Future)
+          </p>
+
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

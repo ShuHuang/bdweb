@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="100" height="100" viewBox="0, 0, 100, 100">
+  <g id="Layer_1">
+    <g>
+      <path d="M8.72,92.045 L8.72,8.045" fill-opacity="0" stroke="#000000" stroke-width="6" stroke-linecap="round"/>
+      <path d="M9.796,92.045 L91.318,92.045" fill-opacity="0" stroke="#000000" stroke-width="6" stroke-linecap="round"/>
+      <path d="M9.796,12.271 L14.529,12.271" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round"/>
+      <path d="M9.796,25.396 L14.529,25.396" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round"/>
+      <path d="M9.796,38.521 L14.529,38.521" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round"/>
+      <path d="M9.796,51.43 L14.529,51.43" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round"/>
+      <path d="M9.796,64.555 L14.529,64.555" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round"/>
+      <path d="M9.796,77.249 L14.529,77.249" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round"/>
+      <path d="M78.483,30.445 C75.631,30.445 73.319,28.133 73.319,25.281 C73.319,22.429 75.631,20.117 78.483,20.117 C81.335,20.117 83.646,22.429 83.646,25.281 C83.646,28.133 81.335,30.445 78.483,30.445 z" fill-opacity="0" stroke="#000000" stroke-width="4"/>
+      <path d="M44.476,50.063 C41.624,50.063 39.312,47.751 39.312,44.9 C39.312,42.048 41.624,39.736 44.476,39.736 C47.327,39.736 49.639,42.048 49.639,44.9 C49.639,47.751 47.327,50.063 44.476,50.063 z" fill-opacity="0" stroke="#000000" stroke-width="4"/>
+      <path d="M67.282,64.973 C64.43,64.973 62.118,62.661 62.118,59.809 C62.118,56.957 64.43,54.645 67.282,54.645 C70.134,54.645 72.446,56.957 72.446,59.809 C72.446,62.661 70.134,64.973 67.282,64.973 z" fill-opacity="0" stroke="#000000" stroke-width="4"/>
+      <path d="M30.123,77.022 C27.272,77.022 24.96,74.71 24.96,71.858 C24.96,69.006 27.272,66.694 30.123,66.694 C32.975,66.694 35.287,69.006 35.287,71.858 C35.287,74.71 32.975,77.022 30.123,77.022 z" fill-opacity="0" stroke="#000000" stroke-width="4"/>
+    </g>
+  </g>
+</svg>

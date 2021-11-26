@@ -1,0 +1,67 @@
+{% extends "about/base.html" %}
+
+{% block title %}Battery Data{% endblock %}
+
+{% block content %}
+
+    <div class="container py-1">
+      <div class="container d-flex flex-column" style="min-height: 30vh;">
+          <div class="row my-auto">
+              <div class=" my-lg-auto py-3 my-3 text-center text-lg-left">
+                  <h1 class="display-4 mt-2 font-weight-normal"> Battery Data</h1>
+                      <p class="lead text-secondary mb-2 pb-2 mr-5 pr-5">
+                        A battery database auto-generated using ChemDataExtractor
+                      </p>
+                      <div class="mb-2">
+                        <a class="btn btn-outline-success mr-2" href="{% url 'about-about' %}">Learn more</a>
+                      </div>
+              </div>
+{#              <div class="col-lg-4 col-md-6 col-sm-12 my-auto mx-auto p-4">#}
+{#                  <images class="pt-4 w-100 my-5" src="{{ url_for('static', filename='images/logo.png') }}">#}
+{#                  <images class="pt-4 w-100 my-5" src="{% static 'about/images/logo.png' %}" alt="My image">#}
+              </div>
+
+      </div>
+      </div>
+    </div>
+
+   <div class="py-5 bg-light">
+    <div class="container py-1">
+      <div class="row mb-1">
+        <div class="col-sm-4 text-center">
+          <a href="{% url 'about-about' %}">
+{#          <img class="img-feature" src="{% static '/images/journal.svg' %}"></a>#}
+          <br></br>
+          <p class="text-secondary lead">Battery data extraction from journal papers</p>
+        </div>
+        <div class="col-sm-4 text-center">
+          <a href="#">
+{#          <images class="images-feature" src="{{ url_for('static', filename='images/database.svg')}}" href="{{ url_for('data') }}"></a>#}
+          <br></br>
+          <p class="text-secondary lead">Auto-generated battery material database</p>
+        </div>
+        <div class="col-sm-4 text-center">
+          <a href="#">
+{#          <images class="images-feature" src="{{ url_for('static', filename='images/prediction.svg')}}" href="{{ url_for('analysis') }}"></a>#}
+          <br></br>
+          <p class="text-secondary lead">Data visualisation and statistical analysis</p>
+        </div>
+      </div>
+    </div>
+         </div>
+
+
+    <div class="py-0 bg-transparent">
+      <div class="container py-5">
+          <h3>Browse the database</h3>
+          <div class="row mb-1 pb-3">
+            <div class="col-lg-4 col-md-6 col-sm-12 pt-2">
+              <a class="btn btn-outline-dark mr-2" href="#">Overview</a>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+{% endblock %}

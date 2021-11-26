@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="66.41" height="75.6" viewBox="0, 0, 132.819, 151.201">
+  <g id="Layer_1" transform="translate(-263.419, -354.754)">
+    <g>
+      <path d="M330.328,499.454 L270.919,465.154 L270.919,396.554 L330.328,362.254 L389.738,396.554 L389.738,465.154 z" fill="#FFFFFF"/>
+      <path d="M330.328,499.454 L270.919,465.154 L270.919,396.554 L330.328,362.254 L389.738,396.554 L389.738,465.154 z" fill-opacity="0" stroke="#000000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g>
+      <path d="M330.328,471.838 L294.836,451.346 L294.836,410.362 L330.328,389.871 L365.821,410.362 L365.821,451.346 z" fill="#FFFFFF"/>
+      <path d="M330.328,471.838 L294.836,451.346 L294.836,410.362 L330.328,389.871 L365.821,410.362 L365.821,451.346 z" fill-opacity="0" stroke="#000000" stroke-width="12" stroke-dasharray="41.04,41.04,41.016,41.016,41.016,1200" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>

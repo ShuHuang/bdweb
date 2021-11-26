@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+    <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="{% static 'about/css/app.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'about/css/replacer.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'about/css/site-style.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'about/css/font-awesome.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'about/css/bootstrap.css' %}">
+
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    {% if title %}
+        <title>BatteryData - {{ title }}</title>
+    {% else %}
+        <title>BatteryData</title>
+    {% endif %}
+</head>
+<body>
+{% block body %}
+        {% block navbar %}
+          <nav class="navbar navbar-expand-lg navbar-light">
+{#            <images src="{{ url_for('static', filename='images/battery-logo.svg') }}" width="30" class="d-inline-block align-top" alt="">#}
+            <div class="navbar-header">
+              <a class="navbar-brand" href="{% url 'about-home' %}">BatteryData</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item mx-1"><a class="nav-link" href="{% url 'about-home' %}">Home</a></li>
+                <li class="nav-item mx-1"><a class="nav-link" href="{% url 'about-about' %}">About</a></li>
+                </ul>
+          </div>
+                      <div class="navbar-nav">
+              <a class="nav-item nav-link" href="#">Login</a>
+              <a class="nav-item nav-link" href="#">Register</a>
+            </div>
+          </nav>
+        {% endblock navbar %}
+
+        {% block content %}
+        {% endblock content %}
+
+        {% block footer %}
+          <footer>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 col-sm-12">
+                  <h2>
+                    <a href="{% url 'about-home' %}">BatteryData</a>
+                  </h2>
+                  <ul>
+                    <li><a href="http://www.mole.phy.cam.ac.uk">Molecular Engineering Group</a></li>
+                    <li><a href="http://www.phy.cam.ac.uk">Cavendish Laboratory</a></li>
+                    <li><a href="http://www.cam.ac.uk">University of Cambridge</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-12">
+                  <h3>About</h3>
+                  <ul>
+                    <li>
+                      <a href="#">Citing</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-12">
+                  <h3>Try</h3>
+                  <ul>
+                    <li>
+                      <a href="#">Source Code</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-12">
+                  <h3>Help</h3>
+                  <ul>
+                    <li>
+                      <a href="#">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </footer>
+        {% endblock footer %}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    {% block scripts %}
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    {% endblock scripts %}
+    {% endblock body %}
+ </body>
+</html>
