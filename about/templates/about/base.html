@@ -34,7 +34,7 @@
             <div class="site-header">
           <nav class="navbar navbar-expand-md navbar-light">
           <div class="container">
-{#            <images src="{{ url_for('static', filename='images/battery-logo.svg') }}" width="30" class="d-inline-block align-top" alt="">#}
+            <img src="{% static 'images/battery-logo.svg' %}" width="30" class="d-inline-block align-top" alt="">
             <div class="navbar-header">
               <a class="navbar-brand mr-4" href="{% url 'about-home' %}">BatteryData</a>
             </div>
