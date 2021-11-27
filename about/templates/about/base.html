@@ -31,10 +31,12 @@
 <body>
 {% block body %}
         {% block navbar %}
-          <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="site-header">
+          <nav class="navbar navbar-expand-md navbar-light">
+          <div class="container">
 {#            <images src="{{ url_for('static', filename='images/battery-logo.svg') }}" width="30" class="d-inline-block align-top" alt="">#}
             <div class="navbar-header">
-              <a class="navbar-brand" href="{% url 'about-home' %}">BatteryData</a>
+              <a class="navbar-brand mr-4" href="{% url 'about-home' %}">BatteryData</a>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -47,11 +49,18 @@
                 <li class="nav-item mx-1"><a class="nav-link" href="{% url 'data-propertydata' %}">Data</a></li>
                 </ul>
           </div>
-                      <div class="navbar-nav">
-              <a class="nav-item nav-link" href="#">Login</a>
-              <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+            <div class="navbar-nav">
+              {% if user.is_authenticated %}
+                <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+                <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+              {% else %}
+                <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+                <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+              {% endif %}
             </div>
           </nav>
+            </div>
+            </header>
         {% endblock navbar %}
         <div class="container">
                 {% if messages %}
