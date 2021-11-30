@@ -1,0 +1,27 @@
+{% extends "about/base.html" %}
+
+{% block title %}Search | Battery Data{% endblock %}
+
+{% block content %}
+    <div class="container page-container">
+        <h1>BatterySearch</h1>
+        <p>Ask a question</p>
+        <form class="form" method="POST" enctype="multipart/form-data">
+            <div class="form-inline">
+                <div class="form-group ">
+                    <input type="text" class="form-control mb-2 mr-sm-5" id="input-question" name="input-question" style="width: 35rem;" >
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <button id="submit-file" class="btn btn-lg btn-primary ">Submit</button>
+            </div>
+      </form>
+    </div>
+{% endblock %}
+
+
+{#{% block scripts %}#}
+{#  {{ super() }}#}
+{#  <script src="{{ url_for('static', filename='js/demo.js') }}"></script>#}
+{#{%- endblock scripts %}#}
