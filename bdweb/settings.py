@@ -36,13 +36,13 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'batteryqa.apps.BatteryqaConfig',
     'crispy_forms',
-    'celery',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_celery_results',
 ]
 
 MIDDLEWARE = [
@@ -149,5 +149,8 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 # EMAIL_HOST_USER =
 # EMAIL_HOST_PASSWORD =
+
+# Celery
+CELERY_RESULT_BACKEND = 'django-db'
 
 
