@@ -19,7 +19,7 @@ $(function() {
     getResults();
 
     // Enable tooltips
-    $('[data-toggle="tooltip"]').tooltip();
+    $('[batteryqa-toggle="tooltip"]').tooltip();
 
     $('.nav-properties a').click(function (e) {
         console.log('click!');

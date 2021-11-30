@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'about.apps.AboutConfig',
     'data.apps.DataConfig',
     'users.apps.UsersConfig',
+    'batteryqa.apps.BatteryqaConfig',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
