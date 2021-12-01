@@ -1,0 +1,55 @@
+{% extends "about/base.html" %}
+
+{% block title %}QA Results | Battery Data{% endblock %}
+
+{% macro display_record(record, index) %}   
+<div class="card mb-3 border rounded-lg" style="width: 38rem;">
+  {% if record['type']=='cathode' %}
+  <div class="card-header p-3 mb-2 bg-dark text-white">Component: {{ record['type'].capitalize() }}</div>
+  {% elif record['type']=='anode'%}
+  <div class="card-header p-3 mb-2 bg-secondary text-white">Component: {{ record['type'].capitalize() }}</div>
+  {% else %}
+  <div class="card-header p-3 mb-2 bg-info text-white">Component: {{ record['type'].capitalize() }}</div>
+  {% endif %}
+  <div class="card-body text-dark">
+    <h5 class="card-title">Material: {{ record['answer'] }}</h5>
+    <p class="card-text"><b>Context: </b>{{ record['context'] }}</p>
+    <p class="card-text"><b>Confidence score: </b>{{ record['score'] }}</p>
+    <p><b>DOI: </b>  {{ record['doi'] }}</p>
+  </div>
+</div>
+{% endmacro %}<a href="#" class="card-link">Card link</a>
+
+{% block content %}
+  <div class="container page-container">
+      <div class="col-sm-12">
+        <h1>Results</h1>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+          <div> 
+              <div class="col-sm-8">
+              </div>
+                  <div>
+                    {% if outputs %}
+                    {% for output in outputs %}
+                      {{ display_record(output, loop.index0) }}
+                    {% endfor %}
+                    {% else %}
+                    <p> No results found!</p>
+                    {% endif %}
+                  </div>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{#{% block scripts %}#}
+{#  {{ super() }}#}
+{#  <script>#}
+{#    var jobId = '{{ job.job_id }}';#}
+{#  </script>#}
+{#  <script src="{{ url_for('static', filename='js/results.js') }}"></script>#}
+{#{%- endblock scripts %}#}

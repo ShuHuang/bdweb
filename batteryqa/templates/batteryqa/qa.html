@@ -8,6 +8,7 @@
       <p>Enter text as context for questions, or upload a paper from RSC, Elsevier, or Springer journal.</p>
 
       <form class="form" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
       <div class="form-inline">
         <div class="mb-2 mr-sm-2">Select a model to analyse:</div >
           <div class="form-group">

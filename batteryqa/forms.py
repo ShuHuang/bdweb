@@ -1,8 +1,10 @@
 from django import forms
+from .models import Question
 
 
-class AnalysisForm(forms.Form):
-    model = forms.ChoiceField('Default model')
-    score = forms.FloatField('Confidence score threshold')
-    inputs = forms.CharField(label='Input text')
-    # submit = forms.Submit('Submit')
+class QuestionForm(forms.ModelForm):
+
+    class Meta:
+        model = Question
+        fields = ['model_name', 'confidence', 'ques', 'context', 'answer', 'score']
+
