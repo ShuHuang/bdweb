@@ -33,28 +33,31 @@
 
       <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
-            <a class="nav-link active" id="text-tab" data-toggle="tab" href="#tab-text" role="tab" aria-controls="text" aria-selected="false" >Enter text</a>
+            <a class="nav-link active" id="text-tab" data-toggle="tab" href="#tab-text" role="tab" aria-controls="text" aria-selected="false">Enter text</a>
         </li>
           <li class="nav-item">
-            <a class="nav-link" id="home-tab" data-toggle="tab" href="#tab-file" role="tab" aria-controls="home" aria-selected="true">Upload a file</a>
+            <a class="nav-link" id="example-tab" data-toggle="tab" href="#tab-example" role="tab" aria-controls="example" aria-selected="true">Examples</a>
         </li>
+{#          <li class="nav-item">#}
+{#            <a class="nav-link" id="home-tab" data-toggle="tab" href="#tab-file" role="tab" aria-controls="home" aria-selected="true">Upload a file</a>#}
+{#        </li>#}
       </ul>
     <div>
       <div class="tab-content">
-        <div role="tabpanel" class="tab-pane" id="tab-file">
-              <div class="form-group">
-              <div class="input-group">
-                <span class="input-group-btn">
-                  <span class="btn btn-default btn-file">Browse a file&hellip;<input type="file" name="input-file"></span>
-                </span>
-                <input type="text" class="form-control" readonly>
-              </div>
-            </div>
-
-         <div class="form-group">
-            <button id="submit-file" class="btn btn-lg btn-primary ">Submit</button>
-          </div>
-        </div>
+{#        <div role="tabpanel" class="tab-pane" id="tab-file">#}
+{#              <div class="form-group">#}
+{#              <div class="input-group">#}
+{#                <span class="input-group-btn">#}
+{#                  <span class="btn btn-default btn-file">Browse a file&hellip;<input type="file" name="input-file"></span>#}
+{#                </span>#}
+{#                <input type="text" class="form-control" readonly>#}
+{#              </div>#}
+{#            </div>#}
+{##}
+{#         <div class="form-group">#}
+{#            <button id="submit-file" class="btn btn-lg btn-primary ">Submit</button>#}
+{#          </div>#}
+{#        </div>#}
       <div role="tabpanel" class="tab-pane active" id="tab-text">
           <div class="form-group">
             <textarea id="input-text" name="context" class="form-control" placeholder="Type or paste text in here... &#10;Example: The cathode of this Li-ion battery system is LiFePO4."></textarea>
@@ -63,6 +66,55 @@
             <button id="submit-text" class="btn btn-lg btn-primary">Submit</button>
           </div>
       </div>
+
+      <div role="tabpanel" class="tab-pane" id="tab-example">
+
+        <div class="panel panel-default panel-results">
+            <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <img class="doc-icon" src="/static/images/document.svg">
+                  <div class="doc-meta">
+                    <p class="text-tiny">
+                             Boc-4-piperidone has a melting point of 73-77 °C, according to ChemSpider.
+                             It has a density of 129.1 gcm-3. Completely unrelated, caffeine has a refractive index of 1.679.
+                             Let's use this spot to look at the bandgap, Ω.
+                             If we use a different material, such as SiO2 (L1), with a high Ω of 2.332(11) meV, at a thickness of 35 pm we can get good results.
+                     </p>
+                      <p class="alert alert-info text-note">
+                        <strong>Note: </strong>
+                            You can try 45 other properties like that, or build models quickly yourself. It's just 3-5 lines of code per model!
+                      </p>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-2">
+                  <a class="btn btn-primary btn-result" href="/results/012bf3a6-eea8-4c40-9af6-a23c57e7b73a">Show Results <i class="glyphicon glyphicon-chevron-right"></i></a>
+                </div>
+              </div>
+          </div>
+          <div class="panel panel-default panel-results">
+        <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <img class="doc-icon" src="/static/images/document.svg">
+                  <div class="doc-meta">
+                    <p class="text-tiny">
+                             Boc-4-piperidone has a melting point of 73-77 °C, according to ChemSpider.
+                             It has a density of 129.1 gcm-3. Completely unrelated, caffeine has a refractive index of 1.679.
+                             Let's use this spot to look at the bandgap, Ω.
+                             If we use a different material, such as SiO2 (L1), with a high Ω of 2.332(11) meV, at a thickness of 35 pm we can get good results.
+                     </p>
+                      <p class="alert alert-info text-note">
+                        <strong>Note: </strong>
+                            You can try 45 other properties like that, or build models quickly yourself. It's just 3-5 lines of code per model!
+                      </p>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-2">
+                  <a class="btn btn-primary btn-result" href="/results/012bf3a6-eea8-4c40-9af6-a23c57e7b73a">Show Results <i class="glyphicon glyphicon-chevron-right"></i></a>
+                </div>
+              </div>
+          </div>
+      </div>
+
       </div>
     </div>
       </form>

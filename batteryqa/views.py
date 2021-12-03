@@ -21,20 +21,11 @@ def batteryqa(request):
         question = request.POST.get('ques', '')
         score = request.POST.get('confidence', '')
         text = request.POST.get('context', '')
-        # print(bertmodel, question, score, text)
         records = run_qa(bertmodel, question, score, text)
         # print(records)
         outputs = {'records': records}
         request.session['outputs'] = outputs
         return redirect(answers)
-        # return render(request, 'batteryqa/answers.html', outputs)
-    # form = QuestionForm(request.GET)
-    # print(form)
-    # print(form.is_valid())
-    # if form.is_valid():
-    #     cd = form.cleaned_data
-    #     print(cd['model_name'])
-    #     return HttpResponse("Do something")
     return render(request, 'batteryqa/qa.html')
 
 
