@@ -8,11 +8,12 @@
       <p>Enter text as context for questions, or upload a paper from RSC, Elsevier, or Springer journal.</p>
 
       <form class="form" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
       <div class="form-inline">
         <div class="mb-2 mr-sm-2">Select a model to analyse:</div >
           <div class="form-group">
           <div class="input-group input-group-sm mb-2 mr-sm-2">
-            <select id="select" name="select" class="custom-select" style="width: 10rem;">
+            <select id="select" name="model_name" class="custom-select" style="width: 10rem;">
               <option selected>BatteryBERT</option>
               <option value="BatterySciBERT">BatterySciBERT</option>
               <option value="BatteryOnlyBERT">BatteryOnlyBERT</option>
@@ -20,11 +21,11 @@
           </div>
         </div>
         <div class="mb-2 mr-sm-2">Confidence score threshold:</div >
-        <input type="number step=any" class="form-control mb-2 mr-sm-2" id="input-score" name="input-score" placeholder="0~1. Default: 0.3"  style="width: 9rem;"  >
+        <input type="number step=any" class="form-control mb-2 mr-sm-2" id="input-score" name="confidence" placeholder="0~1. Default: 0.3" style="width: 9rem;"  >
 
           <div class="form-group ">
             <p class="mb-2 mr-sm-3">Ask a question: </p>
-            <input type="text" class="form-control mb-2 mr-sm-5" id="input-question" name="input-question" placeholder="Defualt: What's the device component? (Anode, cathode, electrolyte)" style="width: 35rem;" >
+            <input type="text" class="form-control mb-2 mr-sm-5" id="input-question" name="ques" placeholder="Default: What's the device component? (Anode, cathode, electrolyte)" style="width: 35rem;" >
         </div>
       </div>
       <br>
@@ -56,7 +57,7 @@
         </div>
       <div role="tabpanel" class="tab-pane active" id="tab-text">
           <div class="form-group">
-            <textarea id="input-text" name="input-text" class="form-control" placeholder="Type or paste text in here... &#10;Example: The cathode of this Li-ion battery system is LiFePO4."></textarea>
+            <textarea id="input-text" name="context" class="form-control" placeholder="Type or paste text in here... &#10;Example: The cathode of this Li-ion battery system is LiFePO4."></textarea>
           </div>
           <div class="form-group">
             <button id="submit-text" class="btn btn-lg btn-primary">Submit</button>
