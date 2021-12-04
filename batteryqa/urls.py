@@ -5,4 +5,5 @@ urlpatterns = [
     path('', views.batteryqa, name='batteryqa-qa'),
     path('search/', views.batterysearch, name='batteryqa-search'),
     path('answer/', views.answers, name='batteryqa-answer'),
+    path('test/', views.test, name='batteryqa-test'),
 ]

@@ -11,15 +11,26 @@
 
       <form class="form" method="POST" enctype="multipart/form-data">
           {% csrf_token %}
+{#          {{ form.as_ul }}#}
       <div class="form-inline">
+{#        <div class="mb-2 mr-sm-2">Select a model to analyse:</div >#}
           <div class="form-group">
           <div class="input-group input-group-sm mb-2 mr-sm-2">
+{#            <select id="id_select" name="select" class="custom-select" style="width: 10rem;">#}
+{#              <option selected>BatteryBERT</option>#}
+{#              <option value="BatterySciBERT">BatterySciBERT</option>#}
+{#              <option value="BatteryOnlyBERT">BatteryOnlyBERT</option>#}
+{#            </select>#}
               {{ form.select|as_crispy_field  }}
           </div>
         </div>
-          {{ form.confidence|as_crispy_field  }}
+{#        <div class="mb-2 mr-sm-2">Confidence score threshold:</div >#}
+{#        <input type="number step=any" class="form-control mb-2 mr-sm-2" id="id_confidence" name="confidence" placeholder="0~1. Default: 0.3" style="width: 9rem;"  >#}
+            {{ form.confidence|as_crispy_field  }}
           <div class="form-group ">
-              {{ form.ques|as_crispy_field  }}
+{#            <p class="mb-2 mr-sm-3">Ask a question: </p>#}
+{#            <input type="text" class="form-control mb-2 mr-sm-5" id="id_ques" name="ques" placeholder="Default: What's the device component? (Anode, cathode, electrolyte)" style="width: 35rem;" >#}
+        {{ form.ques|as_crispy_field  }}
         </div>
       </div>
       <br>

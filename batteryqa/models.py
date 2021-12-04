@@ -3,10 +3,12 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class Question(models.Model):
-    model_name = models.CharField(_('select'), max_length=64)
-    confidence = models.FloatField(_('input-score'))
-    ques = models.CharField(_('input_question'), max_length=100)
-    context = models.TextField(_('input_text'))
+    MODEL = [('BatteryBERT', 'BatteryBERT'), ('BatterySciBERT', 'BatterySciBERT'),
+             ('BatteryOnlyBERT', 'BatteryOnlyBERT')]
+    select = models.CharField(_('Select a model to analyse:'), choices=MODEL, max_length=20, default='BatteryBERT')
+    confidence = models.FloatField(_('Confidence score threshold:'))
+    ques = models.CharField(_('Ask a question:'), max_length=100)
+    context = models.TextField(_(''))
     # answer = models.CharField(_('answer'), max_length=100, default='none')
     # score = models.FloatField(_('score'), default=0)
 

@@ -2,7 +2,7 @@ from transformers.pipelines import pipeline
 
 
 def run_qa(bertmodel, question, score, text):
-    if score == '':
+    if score == '' or score is None:
         score = 0.3
     if text == '':
         text = 'The cathode of this Li-ion battery system is LiFePO4. The anode is graphite.'
