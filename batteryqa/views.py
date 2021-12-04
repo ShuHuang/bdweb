@@ -1,17 +1,25 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
-from .forms import QuestionForm
-from .tasks import run_qa
+from .forms import QuestionForm, SearchForm
+from .tasks import run_qa, run_answer
+
 
 # @login_required()
-# def batteryqa(request):
-#     return render(request, 'batteryqa/qa.html')
-
+# def batterysearch(request):
+#     return render(request, 'batteryqa/search.html')
 
 @login_required()
 def batterysearch(request):
-    return render(request, 'batteryqa/search.html')
+    if request.method == 'POST':
+        form = SearchForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+            question = data['search']
+            run_answer(question)
+    else:
+        form = SearchForm()
+    return render(request, 'batteryqa/search.html', {'form': form})
 
 
 @login_required()
@@ -38,7 +46,6 @@ def answers(request):
 
 @login_required()
 def answers_example(request, example):
-    # outputs = request.session.get('outputs')
     if example == 1:
         records = [{'type': 'cathode', 'answer': 'LiFePO4', 'score': 0.9598992466926575, 'context':
                     'The cathode of this Li-ion battery system is LiFePO4. The anode is graphite.'},
@@ -46,7 +53,7 @@ def answers_example(request, example):
                     'The cathode of this Li-ion battery system is LiFePO4. The anode is graphite.'}]
         outputs = {'records': records}
         return render(request, 'batteryqa/answers.html', outputs)
-    if example == 2:
+    elif example == 2:
         records = [{'type': 'anode', 'answer': 'graphite', 'score': 0.9511426091194153, 'context':
                     'The cathode of this Li-ion battery system is LiFePO4. The anode is graphite.'}]
         outputs = {'records': records}

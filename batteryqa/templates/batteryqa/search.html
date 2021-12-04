@@ -1,16 +1,18 @@
 {% extends "about/base.html" %}
 
+{% load crispy_forms_tags %}
+
 {% block title %}Search | Battery Data{% endblock %}
 
 {% block content %}
     <div class="container page-container">
         <h1>BatterySearch</h1>
-        <p>Ask a question</p>
+        <h6>(DEMO) Ask a question</h6>
         <form class="form" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
             <div class="form-inline">
                 <div class="form-group ">
-                    <input type="text" class="form-control mb-2 mr-sm-5" id="input-question" name="input-question" style="width: 35rem;"
-                    placeholder="Default: What’s the most common electrolyte in 2019?">>
+                    {{ form|crispy }}
                 </div>
             </div>
             <br>

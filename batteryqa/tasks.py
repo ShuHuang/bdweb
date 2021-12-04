@@ -6,11 +6,7 @@ def run_qa(bertmodel, question, score, text):
         score = 0.3
     if text == '':
         text = 'The cathode of this Li-ion battery system is LiFePO4. The anode is graphite.'
-    answers = extract_data(bertmodel, question, text, score)  #list of dictionaries
-    # if answers:
-    #     question.score = answers[0]['score']
-    #     question.answer = answers[0]['answer']
-    #     question.save()
+    answers = extract_data(bertmodel, question, text, score)  # list of dictionaries
     return answers
 
 
@@ -56,3 +52,8 @@ def extract_data(model_name, ques, context, confidence):
                 qanswers.append(ianswer)
                 break
     return qanswers
+
+
+def run_answer(question):
+    print(question)
+    pass

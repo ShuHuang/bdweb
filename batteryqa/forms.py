@@ -1,5 +1,5 @@
 from django import forms
-from .models import Question
+from .models import Question, Search
 
 
 class QuestionForm(forms.ModelForm):
@@ -25,4 +25,23 @@ class QuestionForm(forms.ModelForm):
                                       "Example: The cathode of this Li-ion battery system is LiFePO4."}),
         }
         required = ['confidence', 'ques', 'context']
+
+
+class SearchForm(forms.ModelForm):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        for field in self.Meta.required:
+            self.fields[field].required = False
+
+    class Meta:
+        model = Search
+        fields = ['search']
+        widgets = {
+            'search': forms.TextInput(
+                attrs={'placeholder': "Example: What’s the most common electrolyte in 2019?",
+                       "style": "width: 35rem;"}),
+        }
+        required = ['search']
 

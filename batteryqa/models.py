@@ -1,11 +1,8 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-import uuid
-
 
 class Question(models.Model):
-    # id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=True)
     MODEL = [('BatteryBERT', 'BatteryBERT'), ('BatterySciBERT', 'BatterySciBERT'),
              ('BatteryOnlyBERT', 'BatteryOnlyBERT')]
     select = models.CharField(_('Select a model to analyse:'), choices=MODEL, max_length=20, default='BatteryBERT')
@@ -18,3 +15,7 @@ class Question(models.Model):
     class Meta:
         verbose_name = _('question')
         verbose_name_plural = _('questions')
+
+
+class Search(models.Model):
+    search = models.CharField(_(''), max_length=100)
