@@ -1,0 +1,43 @@
+{% extends "about/base.html" %}
+
+{% load macros %}
+
+{% block title %}Search Results | Battery Data{% endblock %}
+
+{% macro display_record record %}
+    <div class="jumbotron jumbotron-fluid">
+      <h5 class="display-14">Answer: {{ record.answer|capfirst }}</h5>
+      <p class="lead">Source: {{ record.original_question|capfirst }} from the dataset</p>
+    </div>
+{% endmacro %}
+{#<a href="#" class="card-link">Card link</a>#}
+
+{% block content %}
+  <div class="container page-container">
+{#        <h3>Question: {{ questions }} </h3>#}
+    <div class="row">
+      <div class="col-sm-12">
+              <div class="col-sm-8">
+              </div>
+                  <div>
+                    {% if records %}
+                    {% for output in records %}
+                      {% use_macro display_record output %}
+                      {% endfor %}
+                    {% else %}
+                    <p> No results found!</p>
+                    {% endif %}
+                  </div>
+              </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{#{% block scripts %}#}
+{#  {{ super() }}#}
+{#  <script>#}
+{#    var jobId = '{{ job.job_id }}';#}
+{#  </script>#}
+{#  <script src="{{ url_for('static', filename='js/results.js') }}"></script>#}
+{#{%- endblock scripts %}#}

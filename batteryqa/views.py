@@ -9,6 +9,7 @@ from .tasks import run_qa, run_answer
 # def batterysearch(request):
 #     return render(request, 'batteryqa/search.html')
 
+
 @login_required()
 def batterysearch(request):
     if request.method == 'POST':
@@ -16,10 +17,20 @@ def batterysearch(request):
         if form.is_valid():
             data = form.cleaned_data
             question = data['search']
-            run_answer(question)
+            records = run_answer(question)
+            print(records)
+            outputs = {'records': records}
+            request.session['search_results'] = outputs
+            return redirect(search_results)
     else:
         form = SearchForm()
     return render(request, 'batteryqa/search.html', {'form': form})
+
+
+@login_required()
+def search_results(request):
+    outputs = request.session.get('search_results')
+    return render(request, 'batteryqa/search-results.html', outputs)
 
 
 @login_required()
