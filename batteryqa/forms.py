@@ -22,7 +22,7 @@ class QuestionForm(forms.ModelForm):
                        "style": "width: 9;"}),
             'context': forms.Textarea(
                 attrs={'placeholder': "Type or paste text in here...\n"
-                                      "Example: The cathode of this Li-ion battery system is LiFePO4."}),
+                                      "Default example: The cathode of this Li-ion battery system is LiFePO4."}),
         }
         required = ['confidence', 'ques', 'context']
 

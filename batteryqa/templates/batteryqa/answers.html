@@ -39,8 +39,7 @@
                         {% use_macro display_record output %}
                     {% endfor %}
                     {% else %}
-                    <p> No results found!</p>
-                    {% endif %}
+                    <p class="alert alert-primary text-note"> No results found! <br> Try to set a lower confidence score?</p>{% endif %}
                   </div>
               </div>
         </div>

@@ -6,11 +6,12 @@ import queue as Q
 import re
 # import codecs
 
+
 def run_qa(bertmodel, question, score, text):
     if score == '' or score is None:
         score = 0.3
     if text == '':
-        text = 'The cathode of this Li-ion battery system is LiFePO4. The anode is graphite.'
+        text = 'The cathode of this Li-ion battery system is LiFePO4.'
     answers = extract_data(bertmodel, question, text, score)  # list of dictionaries
     return answers
 
@@ -18,15 +19,15 @@ def run_qa(bertmodel, question, score, text):
 def extract_data(model_name, ques, context, confidence):
     confidence = float(confidence)
     if model_name == 'BatteryBERT':
-        model_name = "batterydata/bert-base-qa"
+        model_name = "batterydata/test1"
     elif model_name == 'BatterySciBERT':
-        model_name = "batterydata/bert-base-qa"
+        model_name = "batterydata/test2"
     elif model_name == 'BatteryOnlyBERT':
-        model_name = "batterydata/bert-base-qa"
+        model_name = "batterydata/test3"
     output_model = pipeline('question-answering', model=model_name, tokenizer=model_name)
 
     qanswers = []
-    if ques == '':
+    if ques == '' or ques == "What's the device component?":
         words = ['cathode', 'anode', 'electrolyte']
         for word in words:
             wordn = word + 's'
@@ -34,7 +35,6 @@ def extract_data(model_name, ques, context, confidence):
             if word in context or wordn in context or wordcase in context:
                 qa_input = {'question': "What's the {}?".format(word), 'context': context}
                 res = output_model(qa_input, topk=3)
-                # print(res)
                 for answer in res:
                     if 'battery' in answer['answer'] or 'batteries' in answer['answer'] or 'LIB' in answer['answer']:
                         continue
@@ -48,8 +48,9 @@ def extract_data(model_name, ques, context, confidence):
                         break
     else:
         qa_input = {'question': ques, 'context': context}
+        print(qa_input)
         res = output_model(qa_input, topk=3)
-        # print(question, res)
+        print(qa_input, res)
         for answer in res:
             if answer['score'] > confidence:
                 ianswer = {"type": ques, "answer": answer['answer'], "score": answer['score'],

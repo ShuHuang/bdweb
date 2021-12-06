@@ -6,19 +6,79 @@
 
 {% block content %}
     <div class="container page-container">
-        <h1>BatterySearch</h1>
-        <h6>(DEMO) Ask a question</h6>
+
+        <h1 style="color: #002b04">BatterySearch</h1>
+        <p>DEMO: ask questions about the battery database. </p>
         <form class="form" method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            <div class="form-inline">
-                <div class="form-group ">
-                    {{ form|crispy }}
+        {% csrf_token %}
+      <ul class="nav nav-tabs " role="tablist">
+        <li class="nav-item ">
+            <a class="nav-link active" id="text-tab" data-toggle="tab" href="#tab-text" role="tab" aria-controls="text" aria-selected="false">DEMO: Ask a question</a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" id="example-tab" data-toggle="tab" href="#tab-example" role="tab" aria-controls="example" aria-selected="true">Examples</a>
+        </li>
+      </ul>
+    <div>
+      <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="tab-text">
+          {{ form|crispy }}
+          <div class="form-group">
+            <button id="id_submit" class="btn btn-lg btn-success mr-2">Submit</button>
+          </div>
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="tab-example">
+
+        <div class="panel panel-default panel-results">
+            <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <img class="doc-icon" src="/static/images/document.svg">
+                  <div class="doc-meta">
+                    <p class="text-tiny">
+                             Boc-4-piperidone has a melting point of 73-77 °C, according to ChemSpider.
+                             It has a density of 129.1 gcm-3. Completely unrelated, caffeine has a refractive index of 1.679.
+                             Let's use this spot to look at the bandgap, Ω.
+                             If we use a different material, such as SiO2 (L1), with a high Ω of 2.332(11) meV, at a thickness of 35 pm we can get good results.
+                     </p>
+                      <p class="alert alert-info text-note">
+                        <strong>Note: </strong>
+                            You can try 45 other properties like that, or build models quickly yourself. It's just 3-5 lines of code per model!
+                      </p>
+                  </div>
                 </div>
-            </div>
-            <br>
-            <div class="form-group">
-                <button id="submit-file" class="btn btn-lg btn-primary ">Submit</button>
-            </div>
+                <div class="col-xs-12 col-sm-2">
+                  <a class="btn btn-success btn-sm" href="{% url 'batteryqa-answer-example' 1 %}">Show Results <i class="glyphicon glyphicon-chevron-right"></i></a>
+                </div>
+              </div>
+          </div>
+          <div class="panel panel-default panel-results">
+        <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <img class="doc-icon" src="/static/images/document.svg">
+                  <div class="doc-meta">
+                    <p class="text-tiny">
+                             Boc-4-piperidone has a melting point of 73-77 °C, according to ChemSpider.
+                             It has a density of 129.1 gcm-3. Completely unrelated, caffeine has a refractive index of 1.679.
+                             Let's use this spot to look at the bandgap, Ω.
+                             If we use a different material, such as SiO2 (L1), with a high Ω of 2.332(11) meV, at a thickness of 35 pm we can get good results.
+                     </p>
+                      <p class="alert alert-info text-note">
+                        <strong>Note: </strong>
+                            You can try 45 other properties like that, or build models quickly yourself. It's just 3-5 lines of code per model!
+                      </p>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-2">
+                  <a class="btn btn-success btn-sm" href="{% url 'batteryqa-answer-example' 2 %}">Show Results <i class="glyphicon glyphicon-chevron-right"></i></a>
+                </div>
+              </div>
+          </div>
+      </div>
+
+      </div>
+    </div>
+      </form>
       </form>
     </div>
 {% endblock %}

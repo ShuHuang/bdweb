@@ -2,11 +2,64 @@
 
 {% block title %}Battery Data{% endblock %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Property Data</title>
-</head>
-<body>
-<h1>More data needed including pagination. </h1>
-</body>
-</html>
+{% block content %}
+<div class="page-container">
+<div class="container">
+    <h1 style="color: #002b04">Data Downloads</h1>
+  </div>
+  <section class="section section-default">
+            <div class="container py-lg-3">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h4 style="color: #015c09">Battery Property Dataset</h4>
+                        <p class="feature-display"> Battery property
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                            <a href="#" class="btn btn-success">Download <i class="glyphicon glyphicon-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-default">
+            <div class="container py-2">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h4 style="color: #015c09">Battery Device Dataset</h4>
+                        <p class="feature-display"> Device dataset
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                            <a href="#" class="btn btn-success ">Download <i class="glyphicon glyphicon-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+</div>
+{#        <section class="section section-default">#}
+{#            <div class="container py-2 ">#}
+{#                <div class="row">#}
+{#                    <div class="col-sm-8">#}
+{#                        <h4 style="color: #015c09">Magnetocaloric Materials Dataset</h4>#}
+{#                        <p class="feature-display"> Auto-generated database of compounds and their associated Curie temperature, field dependent magnetic entropy change, and field-dependent relative cooling power. As outlined in the Chemistry of Materials paper &quot;Inverse Design of Magnetocaloric Effect Materials by Text-mining of the Scientific Literature and Generative Deep Learning&quot;.#}
+{##}
+{#Files:#}
+{#database: CSV file containing the auto-generated database of materials and associated properties.#}
+{##}
+{#MP_ids: CSV file containing the Materials Project IDS used for the generative models.#}
+{#                        </p>#}
+{#                    </div>#}
+{#                    <div class="col-sm-4">#}
+{##}
+{#                            <a href="#" class="download-btn-disabled btn btn-lg btn-invert-disabled">Download <i class="glyphicon glyphicon-chevron-right"></i></a>#}
+{##}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </section>#}
+{# <div class="page-container">#}
+{# #}
+{# </div>#}
+
+{% endblock %}
