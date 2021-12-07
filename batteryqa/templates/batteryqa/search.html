@@ -5,27 +5,37 @@
 {% block title %}Search | Battery Data{% endblock %}
 
 {% block content %}
-    <div class="container page-container">
+    <div class="page-container">
 
+        <div class="row">
+            <div class="col-sm-5">
         <h1 style="color: #002b04">BatterySearch</h1>
         <p>DEMO: ask questions about the battery database. </p>
-        <form class="form" method="POST" enctype="multipart/form-data">
+            </div>
+                  <div class="col-sm-1 text-center">
+              <img class="img-feature" src="/static/images/battery-logo-ico.ico">
+          </div>
+            </div>
+
+        <form class="form py-3" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
       <ul class="nav nav-tabs " role="tablist">
         <li class="nav-item ">
-            <a class="nav-link active" id="text-tab" data-toggle="tab" href="#tab-text" role="tab" aria-controls="text" aria-selected="false">DEMO: Ask a question</a>
+            <a class="nav-link active" id="text-tab" data-toggle="tab" href="#tab-text" role="tab" aria-controls="text" aria-selected="false">Search the database</a>
         </li>
           <li class="nav-item">
             <a class="nav-link" id="example-tab" data-toggle="tab" href="#tab-example" role="tab" aria-controls="example" aria-selected="true">Examples</a>
         </li>
+
       </ul>
     <div>
       <div class="tab-content">
       <div role="tabpanel" class="tab-pane active" id="tab-text">
           {{ form|crispy }}
-          <div class="form-group">
+
+{#          <div class="form-group col-sm-8">#}
             <button id="id_submit" class="btn btn-lg btn-success mr-2">Submit</button>
-          </div>
+{#          </div>#}
       </div>
 
       <div role="tabpanel" class="tab-pane" id="tab-example">
@@ -36,19 +46,16 @@
                   <img class="doc-icon" src="/static/images/document.svg">
                   <div class="doc-meta">
                     <p class="text-tiny">
-                             Boc-4-piperidone has a melting point of 73-77 °C, according to ChemSpider.
-                             It has a density of 129.1 gcm-3. Completely unrelated, caffeine has a refractive index of 1.679.
-                             Let's use this spot to look at the bandgap, Ω.
-                             If we use a different material, such as SiO2 (L1), with a high Ω of 2.332(11) meV, at a thickness of 35 pm we can get good results.
+                        <strong>Search Query: </strong> What's the most commonly used anode material in 2015?
                      </p>
-                      <p class="alert alert-info text-note">
-                        <strong>Note: </strong>
-                            You can try 45 other properties like that, or build models quickly yourself. It's just 3-5 lines of code per model!
+                      <p class="alert alert-success text-note">
+{#                        <strong>Note: </strong>#}
+                            Find the anode material in the dataset.
                       </p>
                   </div>
                 </div>
                 <div class="col-xs-12 col-sm-2">
-                  <a class="btn btn-success btn-sm" href="{% url 'batteryqa-answer-example' 1 %}">Show Results <i class="glyphicon glyphicon-chevron-right"></i></a>
+                  <a class="btn btn-success btn-sm" href="{% url 'batteryqa-search-results-example' 1 %}">Show Results <i class="glyphicon glyphicon-chevron-right"></i></a>
                 </div>
               </div>
           </div>
@@ -58,19 +65,55 @@
                   <img class="doc-icon" src="/static/images/document.svg">
                   <div class="doc-meta">
                     <p class="text-tiny">
-                             Boc-4-piperidone has a melting point of 73-77 °C, according to ChemSpider.
-                             It has a density of 129.1 gcm-3. Completely unrelated, caffeine has a refractive index of 1.679.
-                             Let's use this spot to look at the bandgap, Ω.
-                             If we use a different material, such as SiO2 (L1), with a high Ω of 2.332(11) meV, at a thickness of 35 pm we can get good results.
+                            <strong>Search Query: </strong> Cathode 2021
                      </p>
-                      <p class="alert alert-info text-note">
-                        <strong>Note: </strong>
-                            You can try 45 other properties like that, or build models quickly yourself. It's just 3-5 lines of code per model!
+                      <p class="alert alert-success text-note">
+{#                        <strong>Note: </strong>#}
+                            You can also simply type device name and year to get the answer.
                       </p>
                   </div>
                 </div>
                 <div class="col-xs-12 col-sm-2">
-                  <a class="btn btn-success btn-sm" href="{% url 'batteryqa-answer-example' 2 %}">Show Results <i class="glyphicon glyphicon-chevron-right"></i></a>
+                  <a class="btn btn-success btn-sm" href="{% url 'batteryqa-search-results-example' 2 %}">Show Results <i class="glyphicon glyphicon-chevron-right"></i></a>
+                </div>
+              </div>
+          </div>
+           <div class="panel panel-default panel-results">
+        <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <img class="doc-icon" src="/static/images/document.svg">
+                  <div class="doc-meta">
+                    <p class="text-tiny">
+                            <strong>Search Query: </strong> What popular electrolyte material was used in 1999?
+                     </p>
+                      <p class="alert alert-success text-note">
+{#                        <strong>Note: </strong>#}
+                            Ask the same question in another way.
+                      </p>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-2">
+                  <a class="btn btn-success btn-sm" href="{% url 'batteryqa-search-results-example' 3 %}">Show Results <i class="glyphicon glyphicon-chevron-right"></i></a>
+                </div>
+              </div>
+          </div>
+           <div class="panel panel-default panel-results">
+        <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <img class="doc-icon" src="/static/images/document.svg">
+                  <div class="doc-meta">
+                    <p class="text-tiny">
+                            <strong>Search Query: </strong> Do you like this database?
+                     </p>
+                      <p class="alert alert-warning text-note">
+{#                        <strong>Note: </strong>#}
+                            Irrelevant questions cannot be answered as there is no answer in the back-end database.
+                          <br>More function is still being developed at the moment.
+                      </p>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-2">
+                  <a class="btn btn-warning btn-sm" href="{% url 'batteryqa-search-results-example' 4 %}">Show Results <i class="glyphicon glyphicon-chevron-right"></i></a>
                 </div>
               </div>
           </div>

@@ -8,7 +8,7 @@ class QuestionForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
 
         for field in self.Meta.required:
-            self.fields[field].required = False
+            self.fields[field].required = True
 
     class Meta:
         model = Question
@@ -33,7 +33,7 @@ class SearchForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
 
         for field in self.Meta.required:
-            self.fields[field].required = False
+            self.fields[field].required = True
 
     class Meta:
         model = Search

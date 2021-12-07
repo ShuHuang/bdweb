@@ -20,6 +20,8 @@ What's the most common anode in 2016?
 What's the most common anode in 2017?
 What's the most common anode in 2018?
 What's the most common anode in 2019?
+What's the most common anode in 2020?
+What's the most common anode in 2021?
 What's the most common cathode in 1998?
 What's the most common cathode in 1999?
 What's the most common cathode in 2000?
@@ -42,10 +44,8 @@ What's the most common cathode in 2016?
 What's the most common cathode in 2017?
 What's the most common cathode in 2018?
 What's the most common cathode in 2019?
-What's the most common electrolyte in 1968?
-What's the most common electrolyte in 1989?
-What's the most common electrolyte in 1992?
-What's the most common electrolyte in 1997?
+What's the most common cathode in 2020?
+What's the most common cathode in 2021?
 What's the most common electrolyte in 1998?
 What's the most common electrolyte in 1999?
 What's the most common electrolyte in 2000?
@@ -68,7 +68,8 @@ What's the most common electrolyte in 2016?
 What's the most common electrolyte in 2017?
 What's the most common electrolyte in 2018?
 What's the most common electrolyte in 2019?
-What's the most common electrolyte in None?
+What's the most common electrolyte in 2020?
+What's the most common electrolyte in 2021?
 What's the most common battery material in 1998?
 What's the most common battery material in 1999?
 What's the most common battery material in 2000?
@@ -91,3 +92,5 @@ What's the most common battery material in 2016?
 What's the most common battery material in 2017?
 What's the most common battery material in 2018?
 What's the most common battery material in 2019?
+What's the most common battery material in 2020?
+What's the most common battery material in 2021?

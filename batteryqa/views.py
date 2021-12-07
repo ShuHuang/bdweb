@@ -25,6 +25,20 @@ def batterysearch(request):
 @login_required()
 def search_results(request):
     outputs = request.session.get('search_results')
+    print(outputs)
+    return render(request, 'batteryqa/search-results.html', outputs)
+
+
+@login_required()
+def search_results_example(request, example):
+    if example == 1:
+        outputs = {'records': [{'original_question': "what's the most common anode in 2015 ", 'answer': 'graphite'}]}
+    elif example == 2:
+        outputs = {'records': [{'original_question': "what's the most common cathode in 2021 ", 'answer': 'sulfur'}]}
+    elif example == 3:
+        outputs = {'records': [{'original_question': "what's the most common electrolyte in 1999 ", 'answer': 'propylene carbonate'}]}
+    elif example == 4:
+        outputs = {'records': [{'original_question': 'No similar questions found', 'answer': 'No answers found. Ask me some questions about batteries.'}]}
     return render(request, 'batteryqa/search-results.html', outputs)
 
 
