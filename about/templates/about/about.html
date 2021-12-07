@@ -4,15 +4,15 @@
 
 {% block content %}
   <div class="container">
-    <h1 style="color: #002b04">About BatteryData</h1>
+    <h1 class="font-weight-normal" style="color: #002b04">About BatteryData</h1>
   </div>
   <section class="section section-default">
     <div class="container py-1">
       <div class="row">
         <div class="col-sm-8">
-          <p class="feature-display">This battery materials database was auto-generated using ChemDataExtractor.</p>
+          <p class="feature-display">BatteryData is a data-driven battery materials research project, enabled by techniques from the field of natural language processing (NLP) and text mining.</p>
 
-          <p class="feature-display">It contains 292,313 data records with 17,354 unique chemical compound, extracted from 229,061 journal articles</p>
+          <p class="feature-display">Scientific battery research papers are the main data source of BatteryData, from which text-based information is retrieved and database is created.</p>
         </div>
       </div>
     </div>
@@ -23,16 +23,18 @@
       <div class="row">
 
         <div class="col-sm-8">
-          <h3 style="color: #015c09">Database generation</h3>
+          <h3 class="font-weight-normal" style="color: #002b04">Database Auto-generation</h3>
           <p class="feature-display">
-            ChemDataExtractor uses state-of-the-art natural language processing algorithms to interpret
-            language text that makes up the majority of scientific documents. <br>Rule-based parsers are used in ChemDataExtractor-bateries version 1.5 for database construction.
+              A battery materials property database was auto-generated using a bespoke battery version of <a href="https://github.com/ShuHuang/batterydatabase/tree/main/chemdataextractor_batteries">ChemDataExtractor</a>,
+              a tool using state-of-the-art natural language processing algorithms to interpret language text that makes up the majority of scientific documents.</p>
+             <p class="feature-display">  Database auto-generation methods include web-scraping, chemical-named entity recognition (CNER), and relationship extraction.
+              A desktop <a href="https://figshare.com/articles/dataset/A_database_of_battery_materials_auto-generated_using_ChemDataExtractor/11888115/2?file=22789757">graphical user interface(GUI)</a> is provided to aid the use of this database and visualisation.
           </p>
-
-          <p class="feature-display">
-            <b>Cite: </b>Huang, S., Cole, J.M. A database of battery materials auto-generated using ChemDataExtractor. Sci Data 7, 260 (2020).
-            <a href="http://dx.doi.org/10.1021/acs.jcim.6b00207">10.1038/s41597-020-00602-2</a>
-          </p>
+{##}
+{#          <p class="font-weight-light">#}
+{#            <b>Cite: </b>Huang, S., Cole, J.M. A database of battery materials auto-generated using ChemDataExtractor. Sci Data 7, 260 (2020).#}
+{#            <a href="http://dx.doi.org/10.1021/acs.jcim.6b00207">10.1038/s41597-020-00602-2</a>#}
+{#          </p>#}
         </div>
            <div class="col-sm-4 text-center">
               <img class="img-about" src="/static/images/table.svg">
@@ -42,15 +44,18 @@
     </div>
   </section>
 
-  <section class="section section-alternate">
+  <section class="section section-default">
     <div class="container py-3">
       <div class="row">
 
         <div class="col-sm-8">
-          <h3 style="color: #015c09">Battery QA system</h3>
+          <h3 class="font-weight-normal" style="color: #002b04">BatteryBERT Language Modelling</h3>
           <p class="feature-display">
-            Explore the device component and other information of batteries.
+            Huge pre-trained language models, including BatteryBERT, BatterySciBERT and BatteryOnlyBERT, are released for the text mining use.
+              These models can be easily fine-tuned for down-stream tasks, such as document classification and question answering.
           </p>
+            <p class="feature-display">All of the pre-trained and fine-tuned models can be downloaded from <a href="https://huggingface.co/batterydata">batterydata</a>,
+                which can be easily accessed by the Python package <a href="https://huggingface.co/docs/transformers/index">transformers</a>.</p>
         </div>
           <div class="col-sm-4 text-center">
               <img class="img-about" src="/static/images/terminal.svg">
@@ -64,9 +69,13 @@
     <div class="container py-3">
       <div class="row">
         <div class="col-sm-8">
-          <h3 style="color: #015c09">Data-driven material discovery</h3>
+          <h3 class="font-weight-normal" style="color: #002b04">Extractive Q&A System + Search Engine</h3>
           <p class="feature-display">
-            Prediction of next-generation battery materials using machine learning and statistical algorithms. (Future)
+              The extractive Q&A system and search engine are built on fine-tuned BatteryBERT, in order to probe the database to give
+              users a chance to ask dynamic questions from the data, and easily probe all knowledge in the literature about battery materials.</p>
+        <p class="feature-display">  One example usage is to classify anodes, cathodes and electrolyte information about chemicals that reside in the database,
+            and find the most commonly used device material from the search tab.
+
           </p>
 
 

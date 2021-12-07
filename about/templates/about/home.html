@@ -5,10 +5,10 @@
 
 {% block content %}
 
-    <div class="py-1 ">
+    <div class="py-0 ">
       <div class="container d-flex flex-column " style="min-height: 30vh;">
           <div class="row my-auto ">
-              <div class=" my-lg-auto py-3 my-3 text-center text-lg-left">
+              <div class=" my-lg-auto py-1 my-3 text-center text-lg-left">
                   <h1 class="display-4 mt-2 font-weight-normal" style="color: #002b04"> Battery Data</h1>
                       <p class="lead text-secondary mb-2 pb-2 mr-5 pr-5">
                         Natural language processing (NLP) solutions for battery research
@@ -21,45 +21,50 @@
 
       </div>
       </div>
-    </div>
 
-   <div class="py-5 bg-gray">
-    <div class="container py-5">
+   <div class="py-3 bg-gray">
+    <div class="container py-3">
       <div class="row mb-1 ">
         <div class="col-sm-4 text-center">
           <a href="{% url 'about-about' %}">
           <img class="img-feature" src="{% static 'images/journal.svg' %}" style="max-height:100px; max-width:100px"></a>
           <br></br>
-          <p class="text-secondary lead">Battery data extraction from journal papers</p>
+          <p class="text-secondary lead">Natural language processing and text mining from battery research papers</p>
         </div>
         <div class="col-sm-4 text-center">
-          <a href="#">
+          <a href="{% url 'data-data' %}">
           <img class="images-feature" src="{% static 'images/database.svg' %}" href="#" style="max-height:100px; max-width:100px"></a>
           <br></br>
-          <p class="text-secondary lead">Auto-generated battery material database</p>
+          <p class="text-secondary lead">Auto-generated battery materials database using ChemDataExtractor</p>
         </div>
         <div class="col-sm-4 text-center">
-          <a href="#">
-          <img class="images-feature" src="{% static 'images/prediction.svg' %}" href="#" style="max-height:100px; max-width:100px"></a>
+          <a href="{% url 'about-about' %}">
+          <img class="images-feature" src="{% static 'images/battery-logo-ico.ico' %}" href="#" style="max-height:100px; max-width:100px"></a>
           <br></br>
-          <p class="text-secondary lead">Data visualisation and statistical analysis</p>
+          <p class="text-secondary lead">BatteryBERT pre-training and fine-tuning for battery database enhancement</p>
         </div>
       </div>
     </div>
-         </div>
-
-
-    <div class="py-0 bg-transparent">
-      <div class="container py-5">
-          <h3 style="color: #002b04">Browse the database</h3>
-          <div class="row mb-1 pb-3">
-            <div class="col-lg-4 col-md-6 col-sm-12 pt-2">
-              <a class="btn btn-outline-dark mr-2" href="#">Overview</a>
-            </div>
+   </div>
+  <div class="py-4 bg-gray">
+    <div class="container py-3">
+      <div class="row mb-6 ">
+        <div class="col-sm-6">
+                <h3 class="font-weight-lighter" style="color: #002b04">Try the Q&A system</h3>
+                <div class="pt-2">
+                  <a class="btn btn-outline-secondary" href="{% url 'batteryqa-qa' %}">Explore</a>
+                </div>
         </div>
+        <div class="col-sm-6 ">
+          <h3 class="font-weight-lighter" style="color: #002b04">Try the search engine</h3>
+                <div class="pt-2">
+                  <a class="btn btn-outline-secondary" href="{% url 'batteryqa-search' %}">Explore</a>
+                </div>
         </div>
+      </div>
     </div>
-    </div>
+   </div>
+
 
 
 {% endblock %}

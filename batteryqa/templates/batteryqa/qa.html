@@ -6,7 +6,7 @@
 
 {% block content %}
   <div class="container page-container">
-    <h1 style="color: #002b04">BatteryQA</h1>
+    <h1 class="font-weight-normal" style="color: #002b04">BatteryQA</h1>
       <p>Enter text as context for questions, or upload a paper from RSC, Elsevier, or Springer journal.</p>
 
       <form class="form" method="POST" enctype="multipart/form-data">
@@ -58,7 +58,7 @@
 {#          </div>#}
           {{ form.context|as_crispy_field }}
           <div class="form-group">
-            <button id="id_submit" class="btn btn-lg btn-success mr-2">Submit</button>
+            <button id="id_submit" class="btn btn-outline-dark mr-2">Submit</button>
           </div>
       </div>
 

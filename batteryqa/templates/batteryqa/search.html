@@ -5,16 +5,16 @@
 {% block title %}Search | Battery Data{% endblock %}
 
 {% block content %}
-    <div class="page-container">
+    <div class="container page-container">
 
         <div class="row">
             <div class="col-sm-8">
-        <h1 style="color: #002b04">BatterySearch</h1>
-                <p>Search queries about the battery database. <br> </p>
+        <h1 class="font-weight-normal" style="color: #002b04">BatterySearch</h1>
+                <p >Search queries about the battery database. <br> </p>
             <p>You can currently ask question about the most commonly used device material in terms of years. </p>
             </div>
                   <div class="col-sm-1 text-center">
-              <img class="img-feature" src="/static/images/battery-logo-ico.ico">
+{#              <img class="img-feature" src="/static/images/battery-logo-ico.ico">#}
           </div>
             </div>
 
@@ -35,7 +35,7 @@
           {{ form|crispy }}
 
 {#          <div class="form-group col-sm-8">#}
-            <button id="id_submit" class="btn btn-lg btn-success mr-2">Submit</button>
+            <button id="id_submit" class="btn btn-outline-dark mr-2">Submit</button>
 {#          </div>#}
       </div>
 
@@ -43,7 +43,7 @@
 
         <div class="panel panel-default panel-results">
             <div class="row">
-                <div class="col-xs-12 col-sm-10">
+                <div class="col-xs-12 col-sm-10 py-2" >
                   <img class="doc-icon" src="/static/images/document.svg">
                   <div class="doc-meta">
                     <p class="text-tiny">
@@ -62,7 +62,7 @@
           </div>
           <div class="panel panel-default panel-results">
         <div class="row">
-                <div class="col-xs-12 col-sm-10">
+                <div class="col-xs-12 col-sm-10 py-2">
                   <img class="doc-icon" src="/static/images/document.svg">
                   <div class="doc-meta">
                     <p class="text-tiny">
@@ -81,7 +81,7 @@
           </div>
           <div class="panel panel-default panel-results">
         <div class="row">
-                <div class="col-xs-12 col-sm-10">
+                <div class="col-xs-12 col-sm-10 py-2">
                   <img class="doc-icon" src="/static/images/document.svg">
                   <div class="doc-meta">
                     <p class="text-tiny">
@@ -101,8 +101,8 @@
 
            <div class="panel panel-default panel-results">
         <div class="row">
-                <div class="col-xs-12 col-sm-10">
-                  <img class="doc-icon" src="/static/images/document.svg">
+                <div class="col-xs-12 col-sm-10 py-2">
+                  <img class="doc-icon" src="/static/images/cde-logo.svg">
                   <div class="doc-meta">
                     <p class="text-tiny">
                             <strong>Search Query: </strong> Do you like this database?
