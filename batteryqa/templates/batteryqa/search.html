@@ -8,9 +8,10 @@
     <div class="page-container">
 
         <div class="row">
-            <div class="col-sm-5">
+            <div class="col-sm-8">
         <h1 style="color: #002b04">BatterySearch</h1>
-        <p>DEMO: ask questions about the battery database. </p>
+                <p>Search queries about the battery database. <br> </p>
+            <p>You can currently ask question about the most commonly used device material in terms of years. </p>
             </div>
                   <div class="col-sm-1 text-center">
               <img class="img-feature" src="/static/images/battery-logo-ico.ico">
@@ -65,30 +66,11 @@
                   <img class="doc-icon" src="/static/images/document.svg">
                   <div class="doc-meta">
                     <p class="text-tiny">
-                            <strong>Search Query: </strong> Cathode 2021
-                     </p>
-                      <p class="alert alert-success text-note">
-{#                        <strong>Note: </strong>#}
-                            You can also simply type device name and year to get the answer.
-                      </p>
-                  </div>
-                </div>
-                <div class="col-xs-12 col-sm-2">
-                  <a class="btn btn-success btn-sm" href="{% url 'batteryqa-search-results-example' 2 %}">Show Results <i class="glyphicon glyphicon-chevron-right"></i></a>
-                </div>
-              </div>
-          </div>
-           <div class="panel panel-default panel-results">
-        <div class="row">
-                <div class="col-xs-12 col-sm-10">
-                  <img class="doc-icon" src="/static/images/document.svg">
-                  <div class="doc-meta">
-                    <p class="text-tiny">
                             <strong>Search Query: </strong> What popular electrolyte material was used in 1999?
                      </p>
                       <p class="alert alert-success text-note">
 {#                        <strong>Note: </strong>#}
-                            Ask the same question in another way.
+                            Ask the similar question in another way.
                       </p>
                   </div>
                 </div>
@@ -97,6 +79,26 @@
                 </div>
               </div>
           </div>
+          <div class="panel panel-default panel-results">
+        <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <img class="doc-icon" src="/static/images/document.svg">
+                  <div class="doc-meta">
+                    <p class="text-tiny">
+                            <strong>Search Query: </strong> Cathode 2021
+                     </p>
+                      <p class="alert alert-success text-note">
+{#                        <strong>Note: </strong>#}
+                            You can also simply type "device name and year" to get the answer.
+                      </p>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-2">
+                  <a class="btn btn-success btn-sm" href="{% url 'batteryqa-search-results-example' 2 %}">Show Results <i class="glyphicon glyphicon-chevron-right"></i></a>
+                </div>
+              </div>
+          </div>
+
            <div class="panel panel-default panel-results">
         <div class="row">
                 <div class="col-xs-12 col-sm-10">
@@ -107,8 +109,8 @@
                      </p>
                       <p class="alert alert-warning text-note">
 {#                        <strong>Note: </strong>#}
-                            Irrelevant questions cannot be answered as there is no answer in the back-end database.
-                          <br>More function is still being developed at the moment.
+                            Irrelevant questions cannot be answered as there is no answer in the back-end answer dataset.
+                          <br><strong>More search function is still being developed at the moment.</strong>
                       </p>
                   </div>
                 </div>
