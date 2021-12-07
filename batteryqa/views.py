@@ -19,7 +19,7 @@ def batterysearch(request):
             return redirect(search_results)
     else:
         form = SearchForm()
-    return render(request, 'batteryqa/search.html', {'form': form})
+    return render(request, 'batteryqa/search.html', {'form': form, 'title': 'BatterySearch'})
 
 
 @login_required()
@@ -55,7 +55,7 @@ def batteryqa(request):
             return redirect(answers)
     else:
         form = QuestionForm()
-    return render(request, 'batteryqa/qa.html', {'form': form})
+    return render(request, 'batteryqa/qa.html', {'form': form, 'title': 'BatteryQA'})
 
 
 @login_required()
@@ -103,19 +103,3 @@ def answers_example(request, example):
                         "LiNi0.8Co0.15Al0.05O2 (NCA) cathode is a good example."}]
         outputs = {'records': records}
         return render(request, 'batteryqa/answers.html', outputs)
-
-
-# @login_required()
-# def test(request):
-#     if request.method == 'POST':
-#         form = QuestionForm(request.POST)
-#         print(form.is_valid())
-#         if form.is_valid():
-#             data = form.cleaned_data
-#             records = run_qa(data['select'], data['ques'], data['confidence'], data['context'])
-#             outputs = {'records': records}
-#             request.session['outputs'] = outputs
-#             return redirect(answers)
-#     else:
-#         form = QuestionForm()
-#     return render(request, 'batteryqa/test.html', {'form': form})
