@@ -7,7 +7,7 @@
 {% macro display_record record %}
     <div class="jumbotron jumbotron-fluid">
       <h3 class="display-14 font-weight-normal">{{ record.answer|capfirst }}</h3>
-        <p class="lead"><strong>You input:</strong> {{ record.original_question|capfirst }} from the dataset</p>
+        <p class="lead"><strong>You input:</strong> {{ record.original_question|capfirst }}</p>
     </div>
 {% endmacro %}
 {#<a href="#" class="card-link">Card link</a>#}

@@ -19,7 +19,7 @@
   </section>
 
   <section class="section section-default">
-    <div class="container py-4">
+    <div class="container py-3">
       <div class="row">
 
         <div class="col-sm-8">
@@ -45,15 +45,14 @@
   </section>
 
   <section class="section section-default">
-    <div class="container py-4">
+    <div class="container py-3">
       <div class="row">
         <div class="col-sm-8">
           <h3 class="font-weight-normal" style="color: #002b04">BatteryBERT Language Modelling</h3>
           <p class="feature-display">
             Huge pre-trained language models, including BatteryBERT, BatterySciBERT and BatteryOnlyBERT, are released for the text mining use.
-              These models can be easily fine-tuned for down-stream tasks, such as document classification and question answering.
-          </p>
-            <p class="feature-display">All of the pre-trained and fine-tuned models can be downloaded from <a href="https://huggingface.co/batterydata">batterydata</a>,
+              These models can be easily fine-tuned for down-stream tasks.
+        All of the pre-trained and fine-tuned models can be downloaded from <a href="https://huggingface.co/batterydata">batterydata</a>,
                 which can be easily accessed by the Python package <a href="https://huggingface.co/docs/transformers/index">transformers</a>.</p>
         </div>
           <div class="col-sm-4 text-center">
@@ -65,15 +64,13 @@
   </section>
 
   <section class="section section-default">
-    <div class="container py-4">
+    <div class="container py-3">
       <div class="row">
         <div class="col-sm-8">
           <h3 class="font-weight-normal" style="color: #002b04">Extractive Q&A System + Search Engine</h3>
           <p class="feature-display">
-              The <a href="{% url 'batteryqa-qa' %}">extractive Q&A system</a> and <a href="{% url 'batteryqa-search' %}">search engine</a> are built on fine-tuned BatteryBERT, in order to probe the database to give
-              users a chance to ask dynamic questions from the data, and easily probe all knowledge in the literature about battery materials.</p>
-{#        <p class="feature-display">  One example usage is to classify anodes, cathodes and electrolyte information about chemicals that reside in the database,#}
-{#            and find the most commonly used device material from the search tab.#}
+              The <a href="{% url 'batteryqa-qa' %}">extractive Q&A system</a> and <a href="{% url 'batteryqa-search' %}">search engine</a> are built on Q&A fine-tuned BatteryBERT, in order to probe the database to give
+              users a chance to ask dynamic questions from the data, and probe all knowledge in the literature about battery materials.
           </p>
         </div>
           <div class="col-sm-4 text-center">
@@ -85,15 +82,13 @@
   </section>
 
       <section class="section section-default">
-    <div class="container py-4">
+    <div class="container py-3">
       <div class="row">
         <div class="col-sm-8">
           <h3 class="font-weight-normal" style="color: #002b04">Document Classification</h3>
           <p class="feature-display">
-              The <a href="{% url 'batteryqa-qa' %}">extractive Q&A system</a> and <a href="{% url 'batteryqa-search' %}">search engine</a> are built on fine-tuned BatteryBERT, in order to probe the database to give
-              users a chance to ask dynamic questions from the data, and easily probe all knowledge in the literature about battery materials.</p>
-{#        <p class="feature-display">  One example usage is to classify anodes, cathodes and electrolyte information about chemicals that reside in the database,#}
-{#            and find the most commonly used device material from the search tab.#}
+              The <a href="{% url 'classifier-classifier' %}">document classifier</a> is built on fine-tuned BatteryBERT for sequence classification, in order to classify
+              battery or non-battery text given a certain paragraph from abstract of full text.</p>
           </p>
         </div>
           <div class="col-sm-4 text-center">
