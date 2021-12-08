@@ -13,7 +13,7 @@ def classifier(request):
             data = form.cleaned_data
             question = data['text']
             records = run_classifier(question)
-            print(records)
+            # print(records)
             outputs = {'records': records}
             request.session['search_results'] = outputs
             return redirect(classifier_results)
@@ -25,7 +25,7 @@ def classifier(request):
 @login_required()
 def classifier_results(request):
     outputs = request.session.get('search_results')
-    print(outputs)
+    # print(outputs)
     return render(request, 'classifier-results.html', outputs)
 
 

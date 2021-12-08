@@ -17,16 +17,16 @@ def run_classifier(inputs):
     def query(payload):
         data = json.dumps(payload)
         response = requests.request("POST", API_URL, headers=headers, data=data)
-        print(response.content.decode("utf-8"))
+        # print(response.content.decode("utf-8"))
         while response.status_code == 503:
-            print(response)
+            # print(response)
             time.sleep(5)
             response = requests.request("POST", API_URL, headers=headers, data=data)
         return json.loads(response.content.decode("utf-8"))[0]
 
     inputs = inputs
     data = query({"inputs": inputs, "wait_for_model": True})
-    print(data)
+    # print(data)
 
     label0, label1 = data[0]['score'], data[1]['score']
     if label0 > label1:

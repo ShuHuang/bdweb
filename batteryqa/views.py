@@ -13,7 +13,7 @@ def batterysearch(request):
             data = form.cleaned_data
             question = data['search']
             records = run_answer(question)
-            print(records)
+            # print(records)
             outputs = {'records': records}
             request.session['search_results'] = outputs
             return redirect(search_results)
@@ -25,7 +25,7 @@ def batterysearch(request):
 @login_required()
 def search_results(request):
     outputs = request.session.get('search_results')
-    print(outputs)
+    # print(outputs)
     return render(request, 'batteryqa/search-results.html', outputs)
 
 
@@ -49,7 +49,7 @@ def batteryqa(request):
         if form.is_valid():
             data = form.cleaned_data
             records = run_qa(data['select'], data['ques'], data['confidence'], data['context'])
-            print(records)
+            # print(records)
             outputs = {'records': records}
             request.session['outputs'] = outputs
             return redirect(answers)

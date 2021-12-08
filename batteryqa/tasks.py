@@ -48,9 +48,9 @@ def extract_data(model_name, ques, context, confidence):
                         break
     else:
         qa_input = {'question': ques, 'context': context}
-        print(qa_input)
+        # print(qa_input)
         res = output_model(qa_input, topk=3)
-        print(qa_input, res)
+        # print(qa_input, res)
         for answer in res:
             if answer['score'] > confidence:
                 ianswer = {"type": ques, "answer": answer['answer'], "score": answer['score'],
@@ -64,7 +64,7 @@ def run_answer(question):
     """
     return: list of answers (dict of answer and original_question)
     """
-    print(question)
+    # print(question)
     text = question
     if text.endswith('?') or text.endswith('.') or text.endswith(','):
         text = text[:-1]
@@ -99,7 +99,7 @@ def run_answer(question):
             dic = {'original_question': 'No similar questions found',
                    'answer': 'No answers found. Ask me some questions about batteries.'}
             return_answers.append(dic)
-    print(return_answers)
+    # print(return_answers)
 
     return return_answers
 
