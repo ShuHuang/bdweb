@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'data.apps.DataConfig',
     'users.apps.UsersConfig',
     'batteryqa.apps.BatteryqaConfig',
+    'classifier.apps.ClassifierConfig',
     'crispy_forms',
     'macros',
     'django.contrib.admin',

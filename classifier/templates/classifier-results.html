@@ -2,12 +2,12 @@
 
 {% load macros %}
 
-{% block title %}Search Results | Battery Data{% endblock %}
+{% block title %}Text Classifier Results | Battery Data{% endblock %}
 
 {% macro display_record record %}
     <div class="jumbotron jumbotron-fluid">
-      <h5 class="display-14 font-weight-normal">Answer: {{ record.answer|capfirst }}</h5>
-      <p class="lead">Source: {{ record.original_question|capfirst }} from the dataset</p>
+      <h3 class="display-14 font-weight-normal">{{ record.answer|capfirst }}</h3>
+        <p class="lead"><strong>You input:</strong> {{ record.original_question|capfirst }} from the dataset</p>
     </div>
 {% endmacro %}
 {#<a href="#" class="card-link">Card link</a>#}
