@@ -18,12 +18,18 @@ def run_qa(bertmodel, question, score, text):
 
 def extract_data(model_name, ques, context, confidence):
     confidence = float(confidence)
-    if model_name == 'BatteryBERT':
-        model_name = "batterydata/test1"
-    elif model_name == 'BatterySciBERT':
-        model_name = "batterydata/test2"
-    elif model_name == 'BatteryOnlyBERT':
-        model_name = "batterydata/test3"
+    if model_name == 'BatteryBERT-cased':
+        model_name = "batterydata/batterybert-cased-squad-v1"
+    elif model_name == 'BatterySciBERT-cased':
+        model_name = "batterydata/batteryscibert-cased-squad-v1"
+    elif model_name == 'BatteryOnlyBERT-cased':
+        model_name = "batterydata/batteryonlybert-cased-squad-v1"
+    elif model_name == 'BatteryBERT-uncased':
+        model_name = "batterydata/batterybert-cased-squad-v1"
+    elif model_name == 'BatterySciBERT-uncased':
+        model_name = "batterydata/batteryscibert-cased-squad-v1"
+    elif model_name == 'BatteryOnlyBERT-uncased':
+        model_name = "batterydata/batteryonlybert-cased-squad-v1"
     output_model = pipeline('question-answering', model=model_name, tokenizer=model_name)
 
     qanswers = []

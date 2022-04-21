@@ -4,7 +4,7 @@ import requests
 
 
 API_TOKEN = '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'
-API_URL = 'https://api-inference.huggingface.co/models/batterydata/bert-base-doc-classifier'
+API_URL = 'https://api-inference.huggingface.co/models/batterydata/batteryscibert-uncased-abstract'
 
 
 def run_classifier(inputs):
