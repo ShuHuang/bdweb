@@ -29,7 +29,7 @@ def run_classifier(inputs):
     # print(data)
 
     label0, label1 = data[0]['score'], data[1]['score']
-    if label0 > label1:
+    if label0 < label1:
         label = "This isn't a paragraph about battery research"
     else:
         label = "This is a paragraph about battery research"

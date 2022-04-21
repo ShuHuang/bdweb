@@ -1,5 +1,5 @@
 # bdweb
-This is the source code for the [BatteryData](http://176.58.117.20/) web app based on Django.
+This is the source code for the [BatteryData](https://www.materialsforbatteries.org/) web app based on Django.
 
 To test this web app locally, install the requirements.txt file and make migrations using the following command:
 
