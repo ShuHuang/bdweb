@@ -5,7 +5,7 @@ from .forms import TextClassifierForm
 from .tasks import run_classifier
 
 
-@login_required()
+# @login_required()
 def classifier(request):
     if request.method == 'POST':
         form = TextClassifierForm(request.POST)
@@ -22,14 +22,14 @@ def classifier(request):
     return render(request, 'classifier.html', {'form': form, 'title': 'TextClassifier'})
 
 
-@login_required()
+# @login_required()
 def classifier_results(request):
     outputs = request.session.get('search_results')
     # print(outputs)
     return render(request, 'classifier-results.html', outputs)
 
 
-@login_required()
+# @login_required()
 def classifier_results_example(request, example):
     if example == 1:
         outputs = {'records': [{'original_question': "Computational studies based upon density functional theory (DFT) have been carried out on the LixNi0.5Mn0.5O2 system, a promising cathode material for rechargeable lithium batteries. Electronic structure calculations suggest that the nominal valence state distribution is given by the formula . Possible Ni−Mn cation ordering schemes in the layered structure have been examined including intralayer and interlayer configurations. The results on lithium deintercalation of LixNi0.5Mn0.5O2 indicate that the electrochemical behavior is linked to the oxidation of Ni2+. Our calculated cell voltage range as a function of lithium content (x) is compatible with electrochemical measurements that generally show sloping voltage profiles. The calculated Mn−O bond length shows relative invariance with Li extraction, whereas the Ni−O bond shortens significantly, which accords well with the available structural data.", 'answer': 'This is a paragraph about battery research'}]}

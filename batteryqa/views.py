@@ -5,7 +5,7 @@ from .forms import QuestionForm, SearchForm
 from .tasks import run_qa, run_answer
 
 
-@login_required()
+# @login_required()
 def batterysearch(request):
     if request.method == 'POST':
         form = SearchForm(request.POST)
@@ -22,14 +22,14 @@ def batterysearch(request):
     return render(request, 'batteryqa/search.html', {'form': form, 'title': 'BatterySearch'})
 
 
-@login_required()
+# @login_required()
 def search_results(request):
     outputs = request.session.get('search_results')
     # print(outputs)
     return render(request, 'batteryqa/search-results.html', outputs)
 
 
-@login_required()
+# @login_required()
 def search_results_example(request, example):
     if example == 1:
         outputs = {'records': [{'original_question': "what's the most common anode in 2015 ", 'answer': 'graphite'}]}
@@ -42,7 +42,7 @@ def search_results_example(request, example):
     return render(request, 'batteryqa/search-results.html', outputs)
 
 
-@login_required()
+# @login_required()
 def batteryqa(request):
     if request.method == 'POST':
         form = QuestionForm(request.POST)
@@ -58,13 +58,13 @@ def batteryqa(request):
     return render(request, 'batteryqa/qa.html', {'form': form, 'title': 'BatteryQA'})
 
 
-@login_required()
+# @login_required()
 def answers(request):
     outputs = request.session.get('outputs')
     return render(request, 'batteryqa/answers.html', outputs)
 
 
-@login_required()
+# @login_required()
 def answers_example(request, example):
     if example == 1:
         records = [{'type': 'cathode', 'answer': 'lithium iron phosphate', 'score': 0.7359284162521362, 'context':
