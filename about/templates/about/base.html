@@ -15,8 +15,10 @@
       <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
       <link rel="stylesheet" type="text/css" href="{% static 'css/replacer.css' %}">
       <link rel="stylesheet" type="text/css" href="{% static 'css/site-style.css' %}">
-      <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">a
       <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+      <link rel="shortcut icon" type="image/svg" href="{% static 'images/battery-logo.svg' %}"/>
+
 
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -27,6 +29,16 @@
     {% else %}
         <title>BatteryData</title>
     {% endif %}
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <<script async> src="https://www.googletagmanager.com/gtag/js?id=G-YHQY7ZJN9T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YHQY7ZJN9T');
+    </script>
 </head>
 
 <body>

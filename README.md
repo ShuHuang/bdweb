@@ -14,3 +14,4 @@ python manage.py runserver
 ```
 
 ## Citation
+BatteryBERT: A Pre-trained Language Model for Battery Database Enhancement
