@@ -17,4 +17,32 @@ python manage.py runserver
 ```
 
 ## Citation
-BatteryBERT: A Pre-trained Language Model for Battery Database Enhancement
+#### BatteryBERT: A Pre-trained Language Model for Battery Database Enhancement
+```
+@article{huang2022batterybert,
+  title={BatteryBERT: A Pretrained Language Model for Battery Database Enhancement},
+  author={Huang, Shu and Cole, Jacqueline M},
+  journal={J. Chem. Inf. Model.},
+  year={2022},
+  doi={10.1021/acs.jcim.2c00035},
+  url={DOI:10.1021/acs.jcim.2c00035},
+  pages={DOI: 10.1021/acs.jcim.2c00035},
+  publisher={ACS Publications}
+}
+```
+[![DOI](https://zenodo.org/badge/DOI/10.1021/acs.jcim.2c00035.svg)](https://doi.org/10.1021/acs.jcim.2c00035)
+
+#### A database of battery materials auto-generated using ChemDataExtractor
+```
+@article{huang2020database,
+  title={A database of battery materials auto-generated using ChemDataExtractor},
+  author={Huang, Shu and Cole, Jacqueline M},
+  journal={Scientific Data},
+  volume={7},
+  number={1},
+  pages={1--13},
+  year={2020},
+  publisher={Nature Publishing Group}
+}
+```
+[![DOI](https://zenodo.org/badge/DOI/10.1038/s41597-020-00602-2.svg)](https://doi.org/10.1038/s41597-020-00602-2)
