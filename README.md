@@ -16,6 +16,9 @@ Then run the server:
 python manage.py runserver
 ```
 
+## Acknowledgements
+This project was financially supported by the [Science and Technology Facilities Council (STFC)](https://www.ukri.org/councils/stfc/), the [Royal Academy of Engineering](https://raeng.org.uk/) (RCSRF1819\7\10) and [Christ's College, Cambridge](https://www.christs.cam.ac.uk/). The Argonne Leadership Computing Facility, which is a [DOE Office of Science Facility](https://science.osti.gov/), is also acknowledged for use of its research resources, under contract No. DEAC02-06CH11357.
+
 ## Citation
 #### BatteryBERT: A Pre-trained Language Model for Battery Database Enhancement
 ```
@@ -46,3 +49,6 @@ python manage.py runserver
 }
 ```
 [![DOI](https://zenodo.org/badge/DOI/10.1038/s41597-020-00602-2.svg)](https://doi.org/10.1038/s41597-020-00602-2)
+
+#### BatteryDataExtractor: battery-aware text-mining software embedded with BERT models
+S. Huang, J. M. Cole, "BatteryDataExtractor: battery-aware text-mining software embedded with BERT models", Chemical Science (in press, 2022).
