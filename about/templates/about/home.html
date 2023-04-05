@@ -11,7 +11,7 @@
               <div class=" my-lg-auto py-1 my-3 text-center text-lg-left">
                   <h1 class="display-4 mt-2 font-weight-normal" style="color: #002b04"> Battery Data</h1>
                       <p class="lead text-secondary mb-2 pb-2 mr-5 pr-5">
-                        Natural language processing (NLP) solutions for battery research
+                        Natural language processing (NLP) solutions for battery materials research
                       </p>
                       <div class="mb-2">
                         <a class="btn btn-outline-success mr-2" href="{% url 'about-about' %}">Learn more</a>
@@ -26,22 +26,22 @@
     <div class="container py-3">
       <div class="row mb-1 ">
         <div class="col-sm-4 text-center">
-          <a href="{% url 'about-about' %}">
-          <img class="img-feature" src="{% static 'images/journal.svg' %}" style="max-height:100px; max-width:100px"></a>
-          <br></br>
-          <p class="text-secondary lead">Natural language processing and text mining from battery research papers</p>
-        </div>
-        <div class="col-sm-4 text-center">
           <a href="{% url 'data-data' %}">
           <img class="images-feature" src="{% static 'images/database.svg' %}" href="#" style="max-height:100px; max-width:100px"></a>
           <br></br>
-          <p class="text-secondary lead">Auto-generated battery materials database using ChemDataExtractor</p>
+          <p class="text-secondary lead">Auto-generated databases of battery materials using ChemDataExtractor</p>
         </div>
         <div class="col-sm-4 text-center">
-          <a href="{% url 'about-about' %}">
+          <a href="https://huggingface.co/batterydata">
           <img class="images-feature" src="{% static 'images/battery-logo-ico.ico' %}" href="#" style="max-height:100px; max-width:100px"></a>
           <br></br>
-          <p class="text-secondary lead">BatteryBERT pre-training and fine-tuning for battery database enhancement</p>
+          <p class="text-secondary lead">Language model pre-training and fine-tuning for battery database enhancement</p>
+        </div>
+          <div class="col-sm-4 text-center">
+          <a href="https://batterydataextractor.readthedocs.io">
+          <img class="img-feature" src="{% static 'images/journal.svg' %}" style="max-height:100px; max-width:100px"></a>
+          <br></br>
+          <p class="text-secondary lead">Transformer-based open-source toolkit of battery-aware text-mining software</p>
         </div>
       </div>
     </div>
@@ -50,15 +50,15 @@
     <div class="container py-3">
       <div class="row mb-6 ">
         <div class="col-sm-6">
-                <h3 class="font-weight-lighter" style="color: #002b04">Try the Q&A System</h3>
+                <h3 class="font-weight-lighter" style="color: #002b04">Hugging Face Hub</h3>
                 <div class="pt-2">
-                  <a class="btn btn-outline-secondary" href="{% url 'batteryqa-qa' %}">Explore</a>
+                  <a class="btn btn-outline-secondary" href="https://huggingface.co/batterydata">Explore</a>
                 </div>
         </div>
         <div class="col-sm-6 ">
-          <h3 class="font-weight-lighter" style="color: #002b04">Try the Text Classifier</h3>
+          <h3 class="font-weight-lighter" style="color: #002b04">Documentation</h3>
                 <div class="pt-2">
-                  <a class="btn btn-outline-secondary" href="{% url 'classifier-classifier' %}">Explore</a>
+                  <a class="btn btn-outline-secondary" href="https://batterydataextractor.readthedocs.io">Explore</a>
                 </div>
         </div>
       </div>
