@@ -16,6 +16,9 @@ def about(request):
 def citing(request):
     return render(request, 'about/citing.html', {'title': 'Citing'})
 
+def acknowledgement(request):
+    return render(request, 'about/acknowledgement.html', {'title': 'Acknowledgement'})
+
 
 # @login_required()
 def contact(request):
