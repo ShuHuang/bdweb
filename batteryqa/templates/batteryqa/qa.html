@@ -27,10 +27,10 @@
 
       <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
-            <a class="nav-link active" id="text-tab" data-toggle="tab" href="#tab-text" role="tab" aria-controls="text" aria-selected="false">Enter text</a>
+            <a class="nav-link" id="text-tab" data-toggle="tab" href="#tab-text" role="tab" aria-controls="text" aria-selected="false">Enter text</a>
         </li>
           <li class="nav-item">
-            <a class="nav-link" id="example-tab" data-toggle="tab" href="#tab-example" role="tab" aria-controls="example" aria-selected="true">Examples</a>
+            <a class="nav-link active" id="example-tab" data-toggle="tab" href="#tab-example" role="tab" aria-controls="example" aria-selected="true">Examples</a>
         </li>
 {#          <li class="nav-item">#}
 {#            <a class="nav-link" id="home-tab" data-toggle="tab" href="#tab-file" role="tab" aria-controls="home" aria-selected="true">Upload a file</a>#}
@@ -52,17 +52,17 @@
 {#            <button id="submit-file" class="btn btn-lg btn-primary ">Submit</button>#}
 {#          </div>#}
 {#        </div>#}
-      <div role="tabpanel" class="tab-pane active" id="tab-text">
+      <div role="tabpanel" class="tab-pane" id="tab-text">
 {#          <div class="form-group">#}
 {#            <textarea id="id_context" name="context" class="form-control" placeholder="Type or paste text in here... &#10;Example: The cathode of this Li-ion battery system is LiFePO4."></textarea>#}
 {#          </div>#}
           {{ form.context|as_crispy_field }}
           <div class="form-group">
-            <button id="id_submit" class="btn btn-outline-dark mr-2">Submit</button>
+            <button id="id_submit" class="btn btn-outline-dark mr-2" disabled>Submit</button>
           </div>
       </div>
 
-      <div role="tabpanel" class="tab-pane" id="tab-example">
+      <div role="tabpanel" class="tab-pane active" id="tab-example">
 
         <div class="panel panel-default panel-results">
             <div class="row">

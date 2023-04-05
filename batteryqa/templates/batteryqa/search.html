@@ -22,24 +22,24 @@
         {% csrf_token %}
       <ul class="nav nav-tabs " role="tablist">
         <li class="nav-item ">
-            <a class="nav-link active" id="text-tab" data-toggle="tab" href="#tab-text" role="tab" aria-controls="text" aria-selected="false">Search the database</a>
+            <a class="nav-link" id="text-tab" data-toggle="tab" href="#tab-text" role="tab" aria-controls="text" aria-selected="false">Search the database</a>
         </li>
           <li class="nav-item">
-            <a class="nav-link" id="example-tab" data-toggle="tab" href="#tab-example" role="tab" aria-controls="example" aria-selected="true">Examples</a>
+            <a class="nav-link active" id="example-tab" data-toggle="tab" href="#tab-example" role="tab" aria-controls="example" aria-selected="true">Examples</a>
         </li>
 
       </ul>
     <div>
       <div class="tab-content">
-      <div role="tabpanel" class="tab-pane active" id="tab-text">
+      <div role="tabpanel" class="tab-pane" id="tab-text">
           {{ form|crispy }}
 
 {#          <div class="form-group col-sm-8">#}
-            <button id="id_submit" class="btn btn-outline-dark mr-2">Submit</button>
+            <button id="id_submit" class="btn btn-outline-dark mr-2" disabled>Submit</button>
 {#          </div>#}
       </div>
 
-      <div role="tabpanel" class="tab-pane" id="tab-example">
+      <div role="tabpanel" class="tab-pane active" id="tab-example">
 
         <div class="panel panel-default panel-results">
             <div class="row">

@@ -3,8 +3,8 @@ import time
 import requests
 
 
-API_TOKEN = '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'
-API_URL = 'https://api-inference.huggingface.co/models/batterydata/batteryscibert-uncased-abstract'
+API_TOKEN = ''
+API_URL = ''
 
 
 def run_classifier(inputs):

@@ -21,8 +21,8 @@ class QuestionForm(forms.ModelForm):
                 attrs={'placeholder': "0~1. Default: 0.3",
                        "style": "width: 9;"}),
             'context': forms.Textarea(
-                attrs={'placeholder': "Type or paste text in here...\n"
-                                      "Default example: The cathode of this Li-ion battery system is LiFePO4."}),
+                attrs={'placeholder': "We have now dereprecated the interactive function, previously deprecated due to the large size of LLMs.\n"
+                                      "For large-scale data extraction, please use the Python code of BatteryBERT and BatteryDataExtractor, and run extraction in parallel on an HPC machine for optimal performance.\n"}),
         }
         required = ['confidence', 'ques', 'context']
 
@@ -39,9 +39,10 @@ class SearchForm(forms.ModelForm):
         model = Search
         fields = ['search']
         widgets = {
-            'search': forms.TextInput(
-                attrs={'placeholder': "Example: What’s the most common electrolyte in 2019?",
-                       "style": "width: 35rem;"}),
-        }
+            'search': forms.Textarea(
+                attrs={'placeholder': "Example: What’s the most common electrolyte in 2019?\n"
+                                        "We have now dereprecated the interactive function, previously deprecated due to the large size of LLMs.\n"
+                                        "For large-scale data extraction, please use the Python code of BatteryBERT and BatteryDataExtractor, and run extraction in parallel on an HPC machine for optimal performance.\n"}),
+                }
         required = ['search']
 
