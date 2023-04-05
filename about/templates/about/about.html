@@ -10,9 +10,8 @@
     <div class="container py-1">
       <div class="row">
         <div class="col-sm-8">
-          <p class="feature-display">BatteryData is a data-driven battery materials research project, enabled by techniques from the field of natural language processing (NLP) and text mining.</p>
-
-          <p class="feature-display">Scientific battery research papers are the main data source of BatteryData, from which text-based information is retrieved and database is created.</p>
+            <p class="feature-display">BatteryData is a cutting-edge research project that leverages advanced techniques in natural language processing (NLP) and text mining to develop comprehensive databases of battery materials. </p>
+            <p class="feature-display">  The project aims to advance battery technology by extracting and analyzing valuable information from scientific research papers in this field. </p>
         </div>
       </div>
     </div>
@@ -26,8 +25,8 @@
           <h3 class="font-weight-normal" style="color: #002b04">Database Auto-generation</h3>
           <p class="feature-display">
               A battery materials property database was auto-generated using a bespoke battery version of <a href="https://github.com/ShuHuang/batterydatabase/tree/main/chemdataextractor_batteries">ChemDataExtractor</a>,
-              a tool using state-of-the-art natural language processing algorithms to interpret language text that makes up the majority of scientific documents.</p>
-             <p class="feature-display">  Database auto-generation methods include web-scraping, chemical-named entity recognition (CNER), and relationship extraction.
+              which is a tool using a hybrid of rule-based and machine learning-based algorithms to interpret language text that makes up the majority of scientific documents.</p>
+             <p class="feature-display">  Database auto-generation techniques include web-scraping, chemical-named entity recognition (CNER), and relationship extraction.
               A desktop <a href="https://figshare.com/articles/dataset/A_database_of_battery_materials_auto-generated_using_ChemDataExtractor/11888115/2?file=22789757">graphical user interface(GUI)</a> is provided to aid the use of this database and visualisation.
           </p>
 {##}
@@ -50,9 +49,9 @@
         <div class="col-sm-8">
           <h3 class="font-weight-normal" style="color: #002b04">BatteryBERT Language Modelling</h3>
           <p class="feature-display">
-            Huge pre-trained language models, including BatteryBERT, BatterySciBERT and BatteryOnlyBERT, are released for the text mining use.
+            Large language models, including BatteryBERT, BatterySciBERT and BatteryOnlyBERT, are released for the text mining use.
               These models can be easily fine-tuned for down-stream tasks.
-        All of the pre-trained and fine-tuned models can be downloaded from <a href="https://huggingface.co/batterydata">batterydata</a>,
+        All the transformer models can be downloaded from the Hugging Face Hub <a href="https://huggingface.co/batterydata">batterydata</a>,
                 which can be easily accessed by the Python package <a href="https://huggingface.co/docs/transformers/index">transformers</a>.</p>
         </div>
           <div class="col-sm-4 text-center">
@@ -67,11 +66,14 @@
     <div class="container py-3">
       <div class="row">
         <div class="col-sm-8">
-          <h3 class="font-weight-normal" style="color: #002b04">Extractive Q&A System + Search Engine</h3>
+          <h3 class="font-weight-normal" style="color: #002b04">Q&A System, Search Engine, Document Classification</h3>
           <p class="feature-display">
               The <a href="{% url 'batteryqa-qa' %}">extractive Q&A system</a> and <a href="{% url 'batteryqa-search' %}">search engine</a> are built on Q&A fine-tuned BatteryBERT, in order to probe the database to give
               users a chance to ask dynamic questions from the data, and probe all knowledge in the literature about battery materials.
           </p>
+            <p class="feature-display">
+              The <a href="{% url 'classifier-classifier' %}">document classifier</a> is built on fine-tuned BatteryBERT for sequence classification, in order to classify
+              battery or non-battery text given a certain paragraph from abstract of full text.</p>
         </div>
           <div class="col-sm-4 text-center">
               <img class="img-about" src="/static/images/graph.svg">
@@ -85,10 +87,9 @@
     <div class="container py-3">
       <div class="row">
         <div class="col-sm-8">
-          <h3 class="font-weight-normal" style="color: #002b04">Document Classification</h3>
+          <h3 class="font-weight-normal" style="color: #002b04">Software Development: BatteryDataExtractor</h3>
           <p class="feature-display">
-              The <a href="{% url 'classifier-classifier' %}">document classifier</a> is built on fine-tuned BatteryBERT for sequence classification, in order to classify
-              battery or non-battery text given a certain paragraph from abstract of full text.</p>
+              <a href="https://github.com/ShuHuang/batterydataextractor">BatteryDataExtractor</a> is an open-source toolkit of transformer-based text-mining software that is specifically designed to extract and analyze battery-related text data. By enabling researchers to extract meaningful insights from large volumes of scientific research papers related to battery technology, BatteryDataExtractor has the potential to accelerate the pace of research and drive progress in this important field.</p>
           </p>
         </div>
           <div class="col-sm-4 text-center">
