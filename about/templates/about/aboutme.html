@@ -1,0 +1,30 @@
+{% extends "about/base.html" %}
+
+{% block title %}About Me | Battery Data{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1 class="font-weight-normal" style="color: #002b04">About Me</h1>
+  </div>
+  <section class="section section-default">
+    <div class="container py-1">
+      <div class="row">
+        <div class="col-sm-8">
+{#            <img class="img-about" src="/static/images/shu.jpg">#}
+            <img class="images-feature rounded-circle" src='/static/images/shu.jpg' href="#" style="max-height:200px; max-width:200px"></a>
+            <p class="feature-display"><b>Shu Huang</b> (<i>sh2009@cam.ac.uk</i>)</p>
+            <p class="feature-display">I am a PhD student at the Molecular Engineering group in the Cavendish Laboratory of the University of Cambridge, under the guidance of <a href="http://www.mole.phy.cam.ac.uk/people/jmc.php">Professor Jacqueline Cole</a>.
+                I manage and maintain the <i>Battery Data</i> project, which focuses on leveraging text mining and Natural Language Processing (NLP) techniques to analyse the scientific literature on battery materials. Specifically, my work involves developing rule-based applications to extract large-scale data, as well as training and deploying state-of-the-art transformer-based language models.
+                Through these efforts, I have contributed to four published research papers and have also created several open-source language models and packages, including <a href="https://huggingface.co/batterydata">BatteryBERT</a> and <a href="https://github.com/ShuHuang/batterydataextractor">BatteryDataExtractor</a>.</p>
+
+            <p class="feature-display">Following the submission of my PhD thesis, I co-founded <a href="https://alphalex.xyz">Cambridge alphaLex</a>, a consultancy company specializing in natural language processing and generative AI.
+                Our team consists of Cambridge University Alumni including NLP PhDs and cloud software experts.
+                Our mission is to help business decision-makers understand the latest AI technologies and their potential impact.
+                We provide expert guidance on implementing these technologies in your workflows, tailored to meet the specific needs of your business.  </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+{% endblock %}
